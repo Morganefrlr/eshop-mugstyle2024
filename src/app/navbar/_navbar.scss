@@ -1,0 +1,78 @@
+
+
+
+
+
+.mainNavbar{
+    width: 90vw;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    h1{
+        font-weight: 400;
+    }
+
+
+    a{
+        text-decoration: none;
+        color: $main;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 12px;
+
+        &:hover{
+            text-decoration: underline;
+            color:$second ;
+        }
+        &:focus{
+            color: darken($second, 10);
+        }
+
+    }
+}
+
+
+
+.middleContainerNavbar{
+    display: flex;
+    gap: 30px;
+    
+    
+}
+
+
+.rightContainerNavbar{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+
+    .cartIconNavbar{
+        display: flex;
+        align-items: center;
+        position: relative;
+       a{
+        font-size: 18px;
+       }
+
+        div{
+            width: 13px;
+            height: 13px;
+            border-radius: 100%;
+            background-color: $third;
+            color: $second;
+            font-size: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 14px;
+            left: 12px;
+
+        }
+    }
+
+}

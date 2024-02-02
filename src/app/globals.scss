@@ -1,0 +1,28 @@
+
+$main : #27272A;
+$second : #854D0E;
+$third : #D1D5DB;
+
+
+
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: $main;
+}
+
+
+
+
+
+
+
+////////////// IMPORT ////////////// 
+
+@import './navbar/navbar'
+
+
+
+
