@@ -4,6 +4,7 @@ import { useState } from "react";
 import {GiShoppingBag} from 'react-icons/gi'
 import {VscMenu, VscChromeClose} from 'react-icons/vsc'
 import NavbarLinks from "./navbarLinks";
+import NavbarResponsive from "./navbarResponsive";
 
 
 
@@ -11,7 +12,9 @@ const Navbar = () => {
 
     const [open, setOpen] = useState(false)
 
-
+    const handleMenuResponsive = () =>{
+        setOpen(!open)
+    }
 
     return (
         <div className="mainNavbar">
@@ -28,14 +31,7 @@ const Navbar = () => {
                 </div>
             </div>
            
-            <div className="containerNavbarResponsive">
-                {!open ? ( <VscMenu className="icon" onClick={() => setOpen(true)}/>):( <VscChromeClose className='icon active'  onClick={() => setOpen(false)}/>)}
-                {open && 
-                    <NavbarLinks className={'containerNavbarResponsive_links'}/>
-                }
-                    
-                
-            </div>
+            <NavbarResponsive onClick={handleMenuResponsive} open={open}/>
 
         </div>
     );

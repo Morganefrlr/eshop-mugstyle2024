@@ -8,7 +8,6 @@ type Props = {
     className: string
 }
 
-
 const NavbarLinks = ({className}:Props) => {
     return (
         <div className={className}>
