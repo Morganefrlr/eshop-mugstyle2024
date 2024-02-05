@@ -1,5 +1,5 @@
 import {VscMenu, VscChromeClose} from 'react-icons/vsc'
-import NavbarLinks from './navbarLinks';
+import NavbarLinks from './NavbarLinksMenu';
 
 type Props ={
     onClick : ()=>void,
