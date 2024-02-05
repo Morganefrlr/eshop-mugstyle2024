@@ -8,9 +8,9 @@ const Footer = () => {
         <div className="mainFooter">
             <Logo />
 
-            <div>
+            <div className="footerItems">
                 {footerMenuConfig.map(item =>
-                <div key={item.label}>
+                <div className="footerItems_column" key={item.label}>
                     <h3>{item.label}</h3>
                     {item.cat?.map(link =>
                         <Link href={link.href} key={link.labelCat}>{link.labelCat}</Link>
