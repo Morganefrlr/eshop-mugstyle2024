@@ -8,7 +8,7 @@ type Props = {
     className: string
 }
 
-const NavbarLinks = ({className}:Props) => {
+const NavbarLinksMenu = ({className}:Props) => {
     return (
         <div className={className}>
         {navbarLinksConfig.map(item =>
@@ -18,4 +18,4 @@ const NavbarLinks = ({className}:Props) => {
     );
 };
 
-export default NavbarLinks;
+export default NavbarLinksMenu;

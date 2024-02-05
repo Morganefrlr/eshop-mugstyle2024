@@ -2,9 +2,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import {GiShoppingBag} from 'react-icons/gi'
-import {VscMenu, VscChromeClose} from 'react-icons/vsc'
-import NavbarLinks from "./navbarLinks";
-import NavbarResponsive from "./navbarResponsive";
+import NavbarLinksMenu from "./NavbarLinksMenu";
+import NavbarResponsive from "./NavbarResponsive";
+import Logo from "../reusableComponents/logo";
+
 
 
 
@@ -18,9 +19,8 @@ const Navbar = () => {
 
     return (
         <div className="mainNavbar">
-            <h1>MugStyle.</h1>
-
-           <NavbarLinks className={'middleContainerNavbar'}/>
+            <Logo/>
+            <NavbarLinksMenu className={'middleContainerNavbar'}/>
 
             <div className="rightContainerNavbar">
                 <Link href="/">login</Link>
