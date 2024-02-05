@@ -1,29 +1,20 @@
-import Link from "next/link";
+
 import Logo from "../reusableComponents/logo";
-import { footerMenuConfig } from "./footerMenuConfig";
+import FooterLinksMenu from "./FooterLinksMenu";
+import {BiLogoFacebook, BiLogoPinterest, BiLogoInstagram, BiLogoTwitter} from 'react-icons/bi'
 
 
 const Footer = () => {
     return (
         <div className="mainFooter">
             <Logo />
+            <FooterLinksMenu />
 
-            <div className="footerItems">
-                {footerMenuConfig.map(item =>
-                <div className="footerItems_column" key={item.label}>
-                    <h3>{item.label}</h3>
-                    {item.cat?.map(link =>
-                        <Link href={link.href} key={link.labelCat}>{link.labelCat}</Link>
-                    )}
-                    {item.desc && 
-                        <>
-                            <span>{item.desc}</span>
-                            <span>{item.mail}</span>
-                        </>
-                    }
-                </div>
-                
-                )}
+            <div className="footerResponsive">
+                <BiLogoFacebook />
+                <BiLogoInstagram/>
+                <BiLogoPinterest/>
+                <BiLogoTwitter/>
             </div>
         </div>
     );
