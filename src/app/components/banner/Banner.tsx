@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 import { bannerConfig } from './bannerConfig';
 import Link from 'next/link';
 

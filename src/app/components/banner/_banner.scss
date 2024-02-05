@@ -17,7 +17,6 @@
         top: 25%;
         width: 40%;
         height: 60%;
-       // justify-content: space-between;
         left: 8rem;
         display: flex;
         flex-direction: column;
@@ -56,5 +55,25 @@
                 text-decoration: none;
             }
         }
+    }
+}
+
+
+
+@media (max-width: 640px){
+    .bannerMain{
+
+        &_leftSide{
+            width: 90%;
+            align-items: center;
+            top: 20%;
+            left: 5%;
+            gap: 30px;
+
+            span{
+                text-align: center;
+            }
+        }
+
     }
 }
