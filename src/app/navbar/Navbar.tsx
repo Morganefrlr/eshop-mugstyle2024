@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="mainNavbar">
             <h1>MugStyle.</h1>
 
-           <NavbarLinks/>
+           <NavbarLinks className={'middleContainerNavbar'}/>
 
             <div className="rightContainerNavbar">
                 <Link href="/">login</Link>
@@ -28,8 +28,13 @@ const Navbar = () => {
                 </div>
             </div>
            
-            <div>
-                {!open ? ( <VscMenu onClick={() => setOpen(true)}/>):( <VscChromeClose onClick={() => setOpen(false)}/>)}
+            <div className="containerNavbarResponsive">
+                {!open ? ( <VscMenu className="icon" onClick={() => setOpen(true)}/>):( <VscChromeClose className='icon active'  onClick={() => setOpen(false)}/>)}
+                {open && 
+                    <NavbarLinks className={'containerNavbarResponsive_links'}/>
+                }
+                    
+                
             </div>
 
         </div>
