@@ -2,12 +2,27 @@
     width: 55vw;
     margin: 4rem auto;
     display: flex;
-    height: 550px;   
-    gap: 20px;
-
-    &_boxCard{
-        flex: 1;
+    flex-direction: column;
+    
+    p{
+        text-transform: uppercase;
+        font-size: 14px;
+        text-align: center;
+        margin: 4rem 0;
     }
+
+    
+    .featuredCardsBox{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        height: 550px;   
+        &_singleBox{
+            flex: 1;
+        }
+
+    }
+    
 }
 
 
