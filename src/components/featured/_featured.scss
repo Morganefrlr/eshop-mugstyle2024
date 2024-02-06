@@ -1,0 +1,23 @@
+.featuredMain{
+    width: 55vw;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    
+
+    .featuredCardsBox{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        height: 550px;   
+        &_singleBox{
+            flex: 1;
+        }
+
+    }
+    
+}
+
+
+
+

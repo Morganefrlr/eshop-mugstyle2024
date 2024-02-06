@@ -4,7 +4,7 @@ import { useState } from "react";
 import {GiShoppingBag} from 'react-icons/gi'
 import NavbarLinksMenu from "./NavbarLinksMenu";
 import NavbarResponsive from "./NavbarResponsive";
-import Logo from "../reusableComponents/logo";
+import Logo from "../../reusableComponents/logo";
 
 
 

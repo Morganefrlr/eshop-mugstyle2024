@@ -15,7 +15,17 @@ body{
 }
 
 
+@keyframes buttonCard {
+    from{
+        top: 90%;
+        opacity: 0%
+    }
 
+    to{
+        top: 80%;
+        opacity: 1;
+    }
+}
 
 
 
@@ -25,8 +35,11 @@ body{
 @import './navbar/navbar';
 @import './footer/footer';
 @import './home';
-@import './components/banner/banner';
-@import './components/about/about';
+@import '../components/banner/banner';
+@import '../components/about/about';
+@import '../components/featured/featured';
+@import'../reusableComponents/card/card';
+@import '../reusableComponents/title/title';
 
 
 
