@@ -16,7 +16,7 @@ const Card = ({title, cover, price} : Props) => {
             <div className='buttonCard'>
                 <Link href='/'>Explore mug</Link>
             </div>
-            <h3>{title}</h3>
+            <p>{title}</p>
             <p>$ {price}</p>
         </div>
     );

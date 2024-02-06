@@ -1,7 +1,13 @@
 .featuredMain{
-    width: 90vw;
+    width: 55vw;
     margin: 4rem auto;
+    display: flex;
+    height: 550px;   
+    gap: 20px;
 
+    &_boxCard{
+        flex: 1;
+    }
 }
 
 
