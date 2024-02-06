@@ -1,5 +1,5 @@
 
-import Logo from "../reusableComponents/logo";
+import Logo from "../../reusableComponents/logo";
 import FooterLinksMenu from "./FooterLinksMenu";
 import {BiLogoFacebook, BiLogoPinterest, BiLogoInstagram, BiLogoTwitter} from 'react-icons/bi'
 
