@@ -1,0 +1,18 @@
+.productsListMain{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.containerProducts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 55vw;
+    gap: 15px;
+    margin: 0 auto;
+
+    &_singleCard{
+        height: 350px;
+    }
+
+}

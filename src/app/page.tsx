@@ -1,7 +1,8 @@
 import Featured from "@/components/featured/Featured";
 import About from "../components/about/About";
 import Banner from "../components/banner/Banner";
-import ProductsList from "@/reusableComponents/productsList/productsList";
+import ProductsList from "@/reusableComponents/productsList/ProductsList";
+import { allProducts } from "@/fakeData/fakeData";
 
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
       <Banner />
       <About />
       <Featured />
-      <ProductsList />
+      <ProductsList label={'More Products'} products={allProducts.splice(0,9)}/>
     </div>
   );
 }
