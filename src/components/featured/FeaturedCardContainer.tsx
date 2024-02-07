@@ -1,13 +1,18 @@
 import { featuredProducts } from '@/fakeData/fakeData';
+import { ProductType } from '@/fakeData/typeData';
 import Card from '@/reusableComponents/card/Card';
 
 
-const FeaturedCardContainer = () => {
+type Props ={
+    products : ProductType[]
+}
+
+const FeaturedCardContainer = ({products} : Props) => {
 
 
     return (
         <div className='featuredCardsBox'>
-            {featuredProducts.map(item =>
+            {products.map(item =>
                 <div className='featuredCardsBox_singleBox' key={item.title}>
                     <Card title={item.title} cover={item.cover} price={item.price} />
                 </div>
