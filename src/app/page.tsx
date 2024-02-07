@@ -1,6 +1,7 @@
 import Featured from "@/components/featured/Featured";
 import About from "../components/about/About";
 import Banner from "../components/banner/Banner";
+import ProductsList from "@/reusableComponents/productsList/productsList";
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Banner />
       <About />
       <Featured />
+      <ProductsList />
     </div>
   );
 }
