@@ -1,12 +1,13 @@
 
 type Props= {
-    label: string
+    label: string,
+    titlePage: boolean
 }
 
 
-const Title = ({label} : Props) => {
+const Title = ({label, titlePage} : Props) => {
     return (
-        <p className='titleStyled'>{label}</p>
+        <p className={`${titlePage ? 'titleStyled page' :'titleStyled'}`}>{label}</p>
     );
 };
 

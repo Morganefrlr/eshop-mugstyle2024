@@ -14,7 +14,7 @@ const ProductsList = ({label, products} : Props) => {
 
     return (
         <div className='productsListMain'> 
-           <Title label={label}/>
+           <Title label={label} titlePage={false}/>
            <DisplayProductsList products={products}/>
         </div>
     );
