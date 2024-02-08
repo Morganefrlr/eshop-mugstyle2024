@@ -1,14 +1,15 @@
 import { ProductType } from '@/fakeData/typeData';
 import Card from '../card/Card';
+import { allProducts } from '@/fakeData/fakeData';
 
 
 
-type Props={
+type Props = {
     products: ProductType[]
 }
 
-
 const DisplayProductsList = ({products} : Props) => {
+
 
     return (
         <div className='containerProducts'>

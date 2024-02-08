@@ -19,5 +19,19 @@
 }
 
 
+@media (max-width: 768px){
+    .featuredMain{
+        width: 75vw;
+    }
+}
 
+
+@media (max-width: 640px){
+    .featuredCardsBox{
+        flex-direction: column;
+        &_singleBox{
+            height: 250px;
+        }
+    }
+}
 
