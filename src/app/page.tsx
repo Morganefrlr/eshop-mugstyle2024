@@ -3,6 +3,7 @@ import About from "../components/about/About";
 import Banner from "../components/banner/Banner";
 import ProductsList from "@/reusableComponents/productsList/ProductsList";
 import { allProducts, featuredProducts } from "@/fakeData/fakeData";
+import Newsletter from "@/components/newsletter/Newsletter";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <About />
       <Featured products={featuredProducts}/>
       <ProductsList label={'More Products'} products={allProducts.slice(0,9)}/>
+      <Newsletter />
     </div>
   );
 }
