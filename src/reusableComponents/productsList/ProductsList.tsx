@@ -8,11 +8,9 @@ import DisplayProductsList from './DisplayProductsList';
 type Props = {
     label: string,
     products: ProductType[]
-
 }
 
 const ProductsList = ({label, products} : Props) => {
-
 
     return (
         <div className='productsListMain'> 

@@ -16,3 +16,35 @@
     }
 
 }
+
+
+
+
+
+@media (max-width: 1024px){
+    .containerProducts{
+        width: 75vw;
+    }
+}
+
+
+@media (max-width: 768px){
+    .containerProducts{
+        grid-template-columns: repeat(2, 1fr);
+        width: 85vw;
+    }
+}
+
+
+
+@media (max-width: 640px){
+    .containerProducts{
+        display: flex;
+        flex-direction: column;
+        width: 85vw;
+
+        &_singleCard{
+            height: 450px;
+        }
+    }
+}
