@@ -16,7 +16,7 @@ export default function Home() {
       <Banner />
       <About />
       <Featured products={featuredProducts}/>
-      <ProductsList label={'More Products'} products={allProducts.slice(0,9)}/>
+      <ProductsList label={'More Products'} titlePage={false} products={allProducts.slice(0,9)}/>
       <Newsletter />
     </div>
   );
