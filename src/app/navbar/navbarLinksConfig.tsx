@@ -7,7 +7,7 @@ export const navbarLinksConfig = [
         href:'/',
     },{
         label:'our products',
-        href:'/',
+        href:'/our-products',
     },{
         label:'about',
         href:'/',
