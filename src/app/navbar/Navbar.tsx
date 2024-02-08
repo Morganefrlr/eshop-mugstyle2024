@@ -4,7 +4,7 @@ import { useState } from "react";
 import {GiShoppingBag} from 'react-icons/gi'
 import NavbarLinksMenu from "./NavbarLinksMenu";
 import NavbarResponsive from "./NavbarResponsive";
-import Logo from "../../reusableComponents/logo";
+import Logo from "../../reusableComponents/Logo";
 
 
 
@@ -23,7 +23,7 @@ const Navbar = () => {
             <NavbarLinksMenu className={'middleContainerNavbar'}/>
 
             <div className="rightContainerNavbar">
-                <Link href="/">login</Link>
+                <Link href="/login">login</Link>
 
                 <div className="cartIconNavbar">
                     <Link href="/"><GiShoppingBag /></Link>
