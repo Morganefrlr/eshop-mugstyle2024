@@ -64,3 +64,27 @@
     background-color: rgb(37 99 235);
     color: $light;
 }
+
+
+@media (max-width: 768px){
+    .loginMain{
+        width: 90vw;
+    }
+}
+
+
+@media (max-width: 640px){
+    .loginMain{
+        height: 50vh;
+    }
+    .loginComponent{
+        height: 90%;
+        top: 5%;
+        p{
+            display: none;
+        }
+    }
+    .loginButton{
+        height: 20%;
+    }
+}
