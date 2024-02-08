@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LoginComponent from "@/app/login/helper/loginComponent/LoginComponent";
+import LoginComponent from "@/app/login/loginComponent/LoginComponent";
 
 const page = () => {
     return (
