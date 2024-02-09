@@ -14,7 +14,7 @@ const FeaturedCardContainer = ({products} : Props) => {
         <div className='featuredCardsBox'>
             {products.map(item =>
                 <div className='featuredCardsBox_singleBox' key={item.title}>
-                    <Card title={item.title} cover={item.cover} price={item.price} />
+                    <Card title={item.title} cover={item.cover} price={item.price} slug={item.slug}/>
                 </div>
             )}
         </div>

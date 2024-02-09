@@ -1,0 +1,102 @@
+.productPageMain{
+    width: 75vw;
+    margin: 40px auto;
+}
+
+
+.productPageTop{
+    display: flex;
+    gap: 2.5rem;
+    position: relative;
+
+
+    &_rightSide{
+        flex: 1;
+
+    }
+
+    &_leftSide{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+
+        h1{
+            font-weight: 500;
+            margin: 0;
+        }
+        p{
+            text-transform: uppercase;
+            font-size: 10px;
+            color: $gray;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            margin: 0;
+        }
+        span{
+            line-height: 1.20rem; /* 28px */
+            color: $gray;
+            font-size: 12px;
+        }
+
+        .productPagePrice{
+            color: $second;
+            font-size: 18px;
+            font-weight:500 ;
+        }
+    }
+}
+
+
+
+.productPageBottom{
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 40px;
+
+    &_rigthSide{
+        flex: 1;
+
+        p{
+            text-transform: uppercase;
+            font-size: 10px;
+            color: $gray;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+
+        }
+
+        span{
+           width: 100%; 
+           font-size: 12px;
+           line-height: 1.60rem; /* 28px */
+           color: $gray;
+        }
+    }
+
+
+    &_leftSide{
+        flex: 1;
+        color: $gray;
+
+        p{
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+
+        }
+        ul{
+            list-style-type: disc;
+            font-size: 12px;
+            margin: 0;
+            li{
+                margin-top: 10px;
+            }
+        }
+
+    }
+}

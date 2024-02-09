@@ -15,7 +15,7 @@ const DisplayProductsList = ({products} : Props) => {
         <div className='containerProducts'>
                 {products.map(item =>
                     <div key={item.title} className='containerProducts_singleCard'>
-                        <Card  title={item.title} cover={item.cover} price={item.price}/>
+                        <Card  title={item.title} cover={item.cover} price={item.price} slug={item.slug}/>
                     </div>
                 )}
            </div>
