@@ -4,6 +4,7 @@ $second : #854D0E;
 $third : #D1D5DB;
 $light: #F4F4F5;
 $blue: #1D1F2D;
+$gray: rgb(113 113 122);
 
 
 
@@ -46,7 +47,7 @@ body{
 @import '../reusableComponents/productsList/productsList';
 @import '../components/newsletter/newsletter';
 @import '../app/login/loginPage';
-
+@import '../app/our-products/[slug]/productsPage';
 
 
 
