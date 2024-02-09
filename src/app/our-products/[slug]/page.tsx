@@ -13,7 +13,7 @@ const page = ({params} : {params : {slug : string}}) => {
         <div className="productPageMain">
             <div className="productPageTop">
                 <div className="productPageTop_rightSide">
-                    <Image src={singleProduct.cover} alt="" width={500} height={500}/>
+                    <Image src={singleProduct.cover} alt="" width={400} height={400}/>
                 </div>
                 <div className="productPageTop_leftSide">
                     <h1>{singleProduct.title}</h1>
