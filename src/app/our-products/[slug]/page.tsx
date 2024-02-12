@@ -1,4 +1,5 @@
 import Quantity from "@/components/quantity/Quantity";
+import Slider from "@/components/slider/Slider";
 import { singleProduct } from "@/fakeData/fakeData";
 import Image from "next/image";
 
@@ -14,7 +15,7 @@ const page = ({params} : {params : {slug : string}}) => {
         <div className="productPageMain">
             <div className="productPageTop">
                 <div className="productPageTop_rightSide">
-                    <Image src={singleProduct.cover} alt="" width={400} height={400}/>
+                    <Slider images={singleProduct.pictures}/>
                 </div>
                 <div className="productPageTop_leftSide">
                     <h1>{singleProduct.title}</h1>
