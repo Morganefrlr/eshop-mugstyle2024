@@ -1,3 +1,4 @@
+import Quantity from "@/components/quantity/Quantity";
 import { singleProduct } from "@/fakeData/fakeData";
 import Image from "next/image";
 
@@ -20,6 +21,7 @@ const page = ({params} : {params : {slug : string}}) => {
                     <p>by: MugStyle</p>
                     <span>{singleProduct.desc}</span>
                     <p className="productPagePrice">${singleProduct.price}</p>
+                    <Quantity />
                 </div>
             </div>
 
