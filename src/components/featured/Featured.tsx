@@ -9,7 +9,7 @@ type Props ={
 const Featured = ({products} :Props ) => {
     return (
         <div className='featuredMain'>
-            <Title label={'Featured Mugs'} titlePage={false}/>
+            <Title label={'Featured Mugs'} titlePage={false} />
             <FeaturedCardContainer products={products} />
         </div>
     );
