@@ -36,8 +36,8 @@ body{
 
 ////////////// IMPORT ////////////// 
 
-@import './navbar/navbar';
-@import './footer/footer';
+@import '../components/navbar/navbar';
+@import '../components/footer/footer';
 @import './home';
 @import '../components/banner/banner';
 @import '../components/about/about';
