@@ -8,6 +8,7 @@
     display: flex;
     gap: 2.5rem;
     position: relative;
+    margin-bottom: 5rem;
 
 
     &_rightSide{
@@ -54,6 +55,7 @@
     display: flex;
     gap: 2.5rem;
     margin-top: 40px;
+    margin-bottom: 5rem;
 
     &_rigthSide{
         flex: 1;
@@ -98,5 +100,21 @@
             }
         }
 
+    }
+}
+
+@media (max-width: 1024px){
+    .productPageMain{
+        width: 95vw;
+    }
+}
+
+@media (max-width: 768px){
+    .productPageTop{
+        flex-direction: column;
+        &_rightSide{
+            margin-bottom: 50px;
+    
+        }
     }
 }
