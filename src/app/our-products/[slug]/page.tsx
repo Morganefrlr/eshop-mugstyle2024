@@ -1,7 +1,7 @@
 import Quantity from "@/components/quantity/Quantity";
 import Slider from "@/components/slider/Slider";
 import { singleProduct } from "@/fakeData/fakeData";
-import Image from "next/image";
+
 
 
 

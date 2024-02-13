@@ -8,11 +8,11 @@
 
     &_miniature{
         position: absolute;
-        top: 440px;
-        left: 10px;
+        top: 80%;
+        left:1%;
         display: flex;
-        gap: 20px;
-        width: 45vw;
+        gap: 10px;
+        width: 45%;
 
         img{
             width: 120px;
@@ -23,4 +23,13 @@
         }
     }
 
+}
+
+@media (max-width: 768px){
+    .sliderMain{
+
+        &_miniature{
+            top: 48%;
+        }
+    }
 }
