@@ -26,7 +26,7 @@ const Navbar = () => {
                 <Link href="/login">login</Link>
 
                 <div className="cartIconNavbar">
-                    <Link href="/"><GiShoppingBag /></Link>
+                    <Link href="/cart"><GiShoppingBag /></Link>
                     <div>1</div>
                 </div>
             </div>

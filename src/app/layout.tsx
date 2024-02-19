@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.scss";
-import Navbar from "./navbar/Navbar";
-import Footer from "./footer/Footer";
+import Navbar from "../components/navbar/Navbar";
+import Footer from "../components/footer/Footer";
 
 const rubik = Rubik({ subsets: ["latin"] });
 

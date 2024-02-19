@@ -1,7 +1,8 @@
 
 type Props= {
     label: string,
-    titlePage: boolean
+    titlePage: boolean,
+    
 }
 
 
