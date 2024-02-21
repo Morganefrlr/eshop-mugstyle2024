@@ -1,6 +1,16 @@
 .adminDashboard{
-    display: flex;
-    width: 90vw;
-    margin: 30px auto;
-    justify-content: space-between;
+
+    &_first{
+       display: flex;
+        width: 90vw;
+        margin: 30px auto;
+        justify-content: space-between; 
+    }
+    &_second{
+        display: flex;
+        width: 90vw;
+        margin: 0 auto;
+    }
+    
+    
 }

@@ -1,17 +1,22 @@
-import { Squada_One } from 'next/font/google';
-import React from 'react';
+
+
+import SalesChart from './adminRecharts/SalesChart';
 import SquareBox from './adminRecharts/SquareBox';
 
 
 
 const page = () => {
     return (
-        <div>
-            <div className='adminDashboard'>
+        <div className='adminDashboard'>
+            <div className='adminDashboard_first'>
                 <SquareBox />
                 <SquareBox />
                 <SquareBox />
                 <SquareBox />
+            </div>
+
+            <div className='adminDashboard_second'>
+                <SalesChart />
             </div>
         </div>
     );
