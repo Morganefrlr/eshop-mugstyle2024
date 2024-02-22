@@ -6,11 +6,12 @@ type Props = {
     title : string,
     cover : string,
     price: number,
-    slug:string
+    slug:string,
+    adminMode: boolean
 
 }
 
-const Card = ({title, cover, price, slug} : Props) => {
+const Card = ({title, cover, price, slug, adminMode} : Props) => {
     return (
         <div className='cardContainer'>
             <Image alt='' src={cover} width={500} height={500} />
