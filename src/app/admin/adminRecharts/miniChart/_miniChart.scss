@@ -1,4 +1,4 @@
-.squareBoxMain{
+.miniChartMain{
     width: 20vw;
     height: 10vh;
     border-radius: 20px;
@@ -20,13 +20,13 @@
             color: $second;
             font-size: 18px;
         }
-        .titleSquareBox{
+        .titleMiniChart{
             font-size: 12px;
             text-transform: uppercase;
             font-weight: 500;
             color: $gray;
         }
-        .numberSquareBox{
+        .numberMiniChart{
             font-size: 30px;
             font-weight: 300;
         }

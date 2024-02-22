@@ -1,8 +1,9 @@
 
-import PieChartBox from './adminRecharts/PieChartBox';
-import SalesChart from './adminRecharts/SalesChart';
-import SquareBox from './adminRecharts/SquareBox';
-import VisitChart from './adminRecharts/visitChart';
+import PieChartBox from './adminRecharts/pieChart/PieChartBox';
+import SalesChart from './adminRecharts/salesChart/SalesChart';
+import VisitChart from './adminRecharts/visitChart/VisitChart';
+import MiniChart from './adminRecharts/miniChart/MiniChart';
+import { miniChartInfos } from './adminRecharts/chartsConfig';
 
 
 
@@ -10,10 +11,9 @@ const page = () => {
     return (
         <div className='adminDashboard'>
             <div className='adminDashboard_first'>
-                <SquareBox />
-                <SquareBox />
-                <SquareBox />
-                <SquareBox />
+                {miniChartInfos.map(item =>
+                    <MiniChart key={item.title} title={item.title} infos={item.infos} icon={item.icon} dif={item.dif}/>
+                )}
             </div>
 
             <div className='adminDashboard_second'>

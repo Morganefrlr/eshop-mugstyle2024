@@ -16,3 +16,4 @@ export type ProductType = {
     views?:number,
     isFeatured? : boolean
 }
+

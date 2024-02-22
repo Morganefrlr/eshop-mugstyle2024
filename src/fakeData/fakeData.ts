@@ -1,4 +1,5 @@
-import { ProductType } from "./typeData";
+import { ProductType} from "./typeData";
+
 
 
 
@@ -276,3 +277,8 @@ export const allProducts: ProductType[] = [
         desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
     },
 ]
+
+
+
+
+

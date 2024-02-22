@@ -52,10 +52,10 @@ body{
 @import '../components/slider/slider';
 @import './cart/cart';
 @import "../app/admin/admin";
-@import "../app/admin/adminRecharts/squareBox";
-@import "../app/admin/adminRecharts/salesChart";
-@import "../app/admin/adminRecharts/pieChart";
-@import "../app/admin/adminRecharts/visitChart";
+@import "../app/admin/adminRecharts/miniChart/miniChart";
+@import "../app/admin/adminRecharts/salesChart/salesChart";
+@import "../app/admin/adminRecharts/pieChart/pieChart";
+@import "../app/admin/adminRecharts/visitChart/visitChart";
 
 
 

@@ -1,0 +1,17 @@
+.visitChartMain{
+    width: 90vw;
+    height: 22vh;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px lighten($main,50);
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+
+    .visitTitle{
+        margin:10px 0 30px 20px;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $gray;
+    }
+}
