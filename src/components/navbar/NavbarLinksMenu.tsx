@@ -1,5 +1,5 @@
 import React from 'react';
-import { navbarLinksConfig } from './navbarLinksConfig';
+import { navbarAdminLinksConfig, navbarLinksConfig } from './navbarLinksConfig';
 import Link from 'next/link';
 
 
@@ -9,9 +9,13 @@ type Props = {
 }
 
 const NavbarLinksMenu = ({className}:Props) => {
+
+    const admin = true
+    const navbarLinks = admin === true ? navbarAdminLinksConfig : navbarLinksConfig
+
     return (
         <div className={className}>
-        {navbarLinksConfig.map(item =>
+        {navbarLinks.map(item =>
          <Link href={item.href} key={item.label}>{item.label}</Link>
         )}
     </div>

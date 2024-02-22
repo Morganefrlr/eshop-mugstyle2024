@@ -12,7 +12,7 @@ import Logo from "../../reusableComponents/Logo";
 const Navbar = () => {
 
     const [open, setOpen] = useState(false)
-
+    const admin = true
     const handleMenuResponsive = () =>{
         setOpen(!open)
     }
@@ -21,13 +21,16 @@ const Navbar = () => {
         <div className="mainNavbar">
             <Logo/>
             <NavbarLinksMenu className={'middleContainerNavbar'}/>
-
+            
             <div className="rightContainerNavbar">
-                <Link href="/login">login</Link>
+                {!admin && <Link href="/login">login</Link>}
 
                 <div className="cartIconNavbar">
+                {!admin && <>
                     <Link href="/cart"><GiShoppingBag /></Link>
                     <div>1</div>
+                </>}
+                    
                 </div>
             </div>
            
