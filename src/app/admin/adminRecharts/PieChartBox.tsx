@@ -1,21 +1,43 @@
 'use client'
 import {PieChart, Pie, ResponsiveContainer, Cell, } from 'recharts';
+import { IoIosArrowRoundUp, IoIosArrowRoundDown  } from "react-icons/io";
+
 
 const PieChartBox = () => {
     const data = [
-        { name: 'Group A', value: 20, color: '#d9aae4'},
-        { name: 'Group B', value: 20, color: '#a0c3f5'},
-        { name: 'Group C', value: 60, color:'#989696' },
+        { label: 'Social Media', 
+          value: 35, 
+          color: '#27272A', 
+          dif: 30.50,
+          icon: <IoIosArrowRoundUp/>,
+          className: 'green',
+        
+        },
+        { label: 'Google', 
+          value: 43, 
+          color: '#854D0E', 
+          dif: 15.20,
+          icon: <IoIosArrowRoundDown/>,
+          className: 'red',
+        },
+        { label: 'Email', 
+          value: 22, 
+          color:'#D1D5DB', 
+          dif:1.80, 
+          icon: <IoIosArrowRoundUp/>,
+          className: 'green',
+        },
       
 
       ];
-      const COLORS = ['#d9aae4', '#a0c3f5', '#4a4a4a'];
+
 
 
 
     return (
         <div className='pieChartMain'>
-          <p>Social Media</p>
+          <p className='pieTitle'>Channels</p>
+          <div className='pieChartMain_topSide'>
             <ResponsiveContainer>
               <PieChart>
                 <Pie dataKey="value" data={data} fill="#8884d8" label> 
@@ -24,6 +46,23 @@ const PieChartBox = () => {
                 </Pie>
               </PieChart>
             </ResponsiveContainer>
+          </div>
+          <div className='pieChartMain_bottomSide'>
+            {data.map(item =>
+              <div className='pieLegendBox' key={item.label}>
+                <p>{item.value}%</p>
+                <div className={`pieLegendBox_difference ${item.className}`}>
+                  {item.icon}
+                  <p>{item.dif}%</p>
+                </div>
+                <div className='pieLegendBox_label'>
+                  <div className={item.label}/>
+                  <p>{item.label}</p>
+                </div>
+              </div>
+            )}
+            
+          </div>
         </div>
     );
 };
