@@ -5,13 +5,13 @@ import Link from 'next/link';
 
 
 type Props = {
-    className: string
+    className: string,
+    adminMode: boolean
 }
 
-const NavbarLinksMenu = ({className}:Props) => {
+const NavbarLinksMenu = ({className, adminMode}:Props) => {
 
-    const admin = true
-    const navbarLinks = admin === true ? navbarAdminLinksConfig : navbarLinksConfig
+    const navbarLinks = adminMode === true ? navbarAdminLinksConfig : navbarLinksConfig
 
     return (
         <div className={className}>
