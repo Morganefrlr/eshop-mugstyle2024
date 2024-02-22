@@ -1,0 +1,9 @@
+.visitChartMain{
+    width: 90vw;
+    height: 20vh;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px lighten($main,50);
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}

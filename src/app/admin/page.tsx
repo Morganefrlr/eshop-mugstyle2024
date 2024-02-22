@@ -2,6 +2,7 @@
 import PieChartBox from './adminRecharts/PieChartBox';
 import SalesChart from './adminRecharts/SalesChart';
 import SquareBox from './adminRecharts/SquareBox';
+import VisitChart from './adminRecharts/visitChart';
 
 
 
@@ -18,6 +19,10 @@ const page = () => {
             <div className='adminDashboard_second'>
                 <SalesChart />
                 <PieChartBox />
+            </div>
+
+            <div className='adminDashboard_third'>
+                <VisitChart />
             </div>
         </div>
     );
