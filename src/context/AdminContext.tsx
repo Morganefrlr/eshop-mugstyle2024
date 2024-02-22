@@ -4,5 +4,9 @@ import { createContext } from "react";
 
 export default createContext({
     adminMode : true,
-    setAdminMode: () => {}
+    setAdminMode: () => {},
+
+
+    editMode : false,
+    setEditMode: () => {}
 })

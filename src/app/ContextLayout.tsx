@@ -15,11 +15,17 @@ type Props ={
 const ContextLayout = ({children} : Props) => {
 
     const [adminMode, setAdminMode] = useState(true)
+    const [editMode, setEditMode] = useState(false)
 
     const adminProviderValue ={
         adminMode,
-        setAdminMode
+        setAdminMode,
+        editMode,
+        setEditMode
     }
+
+
+    
     return (
         <AdminContext.Provider value={adminProviderValue}>
             <body className={rubik.className}>
