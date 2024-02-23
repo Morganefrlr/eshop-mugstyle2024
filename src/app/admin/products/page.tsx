@@ -4,36 +4,35 @@ import { useGlobalAdminContext } from '@/context/AdminContext';
 import { allProducts } from '@/fakeData/fakeData';
 import DisplayProductsList from '@/reusableComponents/productsList/DisplayProductsList';
 import Title from '@/reusableComponents/title/Title';
+import AdminPanel from './adminPanel/AdminPanel';
 
 
 
 
 const page = () => {
 
-    const {editMode, setEditMode} = useGlobalAdminContext()
+    const {adminPanel ,setAdminPanel, setAdminPanelSelected, adminPanelSelected} = useGlobalAdminContext()
 
     const handleEditMode = () =>{
-        setEditMode(false)
+        setAdminPanel(false)
     }
+
+    const handleAddPanel = async () =>{
+       await setAdminPanelSelected('add')
+        setAdminPanel(true)
+    }
+
 
     return (
         <div className='productsMain'>
             <div className='productListAdmin'>
                 <div className='productListAdmin_top'>
                     <Title label={'Products'} titlePage={true}/>
-                    <button>Add New Product +</button>
+                    <button onClick={handleAddPanel}>Add New Product +</button>
                 </div>
                 <DisplayProductsList products={allProducts}/>
             </div>
-            {editMode &&
-                <div className='productEditAdmin'>
-                    <div className='productEditAdmin_top'>
-                        <Title label={'Edit Product'} titlePage={true}/>
-                        <button onClick={handleEditMode}>X</button>
-                    </div>
-                </div>
-            }
-           
+            {adminPanel && <AdminPanel handleEditMode={handleEditMode}/>}
             
         </div>
     );

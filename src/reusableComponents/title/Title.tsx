@@ -1,6 +1,6 @@
 
 type Props= {
-    label: string,
+    label: string | undefined,
     titlePage: boolean,
     
 }

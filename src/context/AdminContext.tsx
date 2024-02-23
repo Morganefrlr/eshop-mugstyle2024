@@ -7,8 +7,11 @@ export type GlobalAdminContext = {
     adminMode :boolean,
     setAdminMode:(c:boolean) => void,
 
-    editMode :boolean,
-    setEditMode:(c:boolean) => void
+    adminPanel :boolean,
+    setAdminPanel:(c:boolean) => void,
+
+    adminPanelSelected : string,
+    setAdminPanelSelected:(c:string) => void,
 }
 
 
@@ -20,9 +23,11 @@ export const AdminContext = createContext<GlobalAdminContext>({
     adminMode : true,
     setAdminMode: () => {},
 
+    adminPanel : false,
+    setAdminPanel: () => {},
 
-    editMode : false,
-    setEditMode: () => {}
+    adminPanelSelected : 'edit',
+    setAdminPanelSelected:() => {},
 })
 
 

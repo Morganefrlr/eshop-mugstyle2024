@@ -15,15 +15,18 @@ type Props ={
 const ContextLayout = ({children} : Props) => {
 
     const [adminMode, setAdminMode] = useState<boolean>(true)
-    const [editMode, setEditMode] = useState<boolean>(false)
+    const [adminPanel, setAdminPanel] = useState<boolean>(false)
+    const [adminPanelSelected, setAdminPanelSelected] = useState<string>('edit')
 
 
     
     const adminProviderValue ={
         adminMode,
         setAdminMode,
-        editMode,
-        setEditMode
+        adminPanel,
+        setAdminPanel,
+        adminPanelSelected,
+        setAdminPanelSelected,
     }
 
 
