@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Logo = () => {
+const LogoMugStyle = () => {
     return (
         <h1>MugStyle.</h1>
     );
 };
 
-export default Logo;
+export default LogoMugStyle;

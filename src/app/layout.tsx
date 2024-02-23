@@ -1,10 +1,8 @@
-import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
-import "./globals.scss";
-import Navbar from "../components/navbar/Navbar";
-import Footer from "../components/footer/Footer";
 
-const rubik = Rubik({ subsets: ["latin"] });
+import type { Metadata } from "next";
+import "./globals.scss";
+import ContextLayout from "./ContextLayout";
+
 
 export const metadata: Metadata = {
   title: "MugStyle e-shop",
@@ -16,13 +14,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+
   return (
     <html lang="fr">
-      <body className={rubik.className}>
-        <Navbar/>
+      <ContextLayout>
         {children}
-        <Footer />
-      </body>
+      </ContextLayout>
     </html>
   );
 }
