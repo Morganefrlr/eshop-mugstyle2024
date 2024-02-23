@@ -1,18 +1,18 @@
 'use client'
 import Link from "next/link";
-import {  useContext, useState } from "react";
+import {  useState } from "react";
 import {GiShoppingBag} from 'react-icons/gi'
 import NavbarLinksMenu from "./NavbarLinksMenu";
 import NavbarResponsive from "./NavbarResponsive";
 import Logo from "../../reusableComponents/LogoMugStyle";
-import AdminContext from "@/context/AdminContext";
+import  { useGlobalAdminContext } from "@/context/AdminContext";
 
 
 
 
 const Navbar = () => {
 
-    const {adminMode} = useContext(AdminContext)
+    const {adminMode} = useGlobalAdminContext()
     const [open, setOpen] = useState(false)
 
     const handleMenuResponsive = () =>{

@@ -1,8 +1,22 @@
 'use client'
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 
 
-export default createContext({
+
+export type GlobalAdminContext = {
+    adminMode :boolean,
+    setAdminMode:(c:boolean) => void,
+
+    editMode :boolean,
+    setEditMode:(c:boolean) => void
+}
+
+
+
+
+
+
+export const AdminContext = createContext<GlobalAdminContext>({
     adminMode : true,
     setAdminMode: () => {},
 
@@ -10,3 +24,7 @@ export default createContext({
     editMode : false,
     setEditMode: () => {}
 })
+
+
+
+export const useGlobalAdminContext = () => useContext(AdminContext)

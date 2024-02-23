@@ -1,16 +1,16 @@
 'use client'
 
-import AdminContext from '@/context/AdminContext';
+import { useGlobalAdminContext } from '@/context/AdminContext';
 import { allProducts } from '@/fakeData/fakeData';
 import DisplayProductsList from '@/reusableComponents/productsList/DisplayProductsList';
 import Title from '@/reusableComponents/title/Title';
-import { useContext } from 'react';
+
 
 
 
 const page = () => {
 
-    const {editMode, setEditMode} = useContext(AdminContext)
+    const {editMode, setEditMode} = useGlobalAdminContext()
 
     const handleEditMode = () =>{
         setEditMode(false)

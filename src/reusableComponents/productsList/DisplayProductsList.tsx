@@ -2,8 +2,7 @@
 
 import { ProductType } from '@/fakeData/typeData';
 import Card from '../card/Card';
-import { useContext } from 'react';
-import AdminContext from '@/context/AdminContext';
+import { useGlobalAdminContext } from '@/context/AdminContext';
 
 
 
@@ -14,7 +13,7 @@ type Props = {
 
 const DisplayProductsList = ({products} : Props) => {
     
-    const {adminMode, setEditMode} = useContext(AdminContext)
+    const {adminMode, setEditMode} = useGlobalAdminContext()
 
     return (
         <div className='containerProducts'>

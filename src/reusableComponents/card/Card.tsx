@@ -1,7 +1,7 @@
-import { Span } from 'next/dist/trace';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { ReactNode } from 'react';
+
 
 type Props = {
     title : string,
@@ -9,7 +9,7 @@ type Props = {
     price: number,
     slug:string,
     adminMode: boolean,
-    setEditMode: ReactNode
+    setEditMode:(c:boolean) => void
 
 }
 
