@@ -41,7 +41,6 @@ const AdminPanel = ({ handleEditMode}:Props) => {
 
                 <div className='containerForm'>
                     {displayContent && displayContent.Content}
-
                 </div>
             </div>
     );
