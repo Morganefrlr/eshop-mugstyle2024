@@ -1,9 +1,6 @@
 import { useGlobalAdminContext } from '@/context/AdminContext';
 import Title from '@/reusableComponents/title/Title';
-import React from 'react';
-
-import EditForm from './EditForm';
-import AddForm from './AddForm';
+import { adminPanelConfig } from './config';
 
 
 type Props ={
@@ -13,20 +10,6 @@ type Props ={
 const AdminPanel = ({ handleEditMode}:Props) => {
 
     const {adminPanelSelected} = useGlobalAdminContext()
-
-
-    const adminPanelConfig = [
-        {
-            index:'edit',
-            label:'Edit Product',
-            Content: <EditForm />,
-        },
-        {
-            index:'add',
-            label:'Add New Product',
-            Content:<AddForm /> ,
-        },
-    ]
     const displayContent = adminPanelConfig.find((item) => item.index === adminPanelSelected)  
     
   

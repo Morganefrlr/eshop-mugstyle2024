@@ -1,10 +1,9 @@
 import React from 'react';
+import Form from './form/Form';
 
 const AddForm = () => {
     return (
-        <div>
-            je suis le add form
-        </div>
+        <Form submit={'Add New Product'}/>
     );
 };
 
