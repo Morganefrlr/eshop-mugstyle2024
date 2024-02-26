@@ -57,8 +57,9 @@
 
 
         button{
-            width: 20%;
+            //width: 20%;
             height: 50px;
+            padding: 0 20px;
             border-radius: 25px;
             border: 1px solid $main;
             font-size: 16px;
@@ -74,4 +75,133 @@
             }
         }
     }
+}
+
+
+.containerForm{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+}
+
+
+
+.formMain{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &_imageContainer{
+        width: 99%;
+        height: 150px;
+        border: 1px solid lighten($third, 10);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-size: 50px;
+            cursor: pointer;
+            color: $third;
+        }
+        img{
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+    
+    .titleForm{
+        margin: 30px 0 10px 0;
+        font-size: 18px;
+    }
+
+
+
+    &_inputsContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        div{
+            border: 1px solid lighten($third, 10);
+            border-radius: 20px;
+            padding: 5px 20px;
+
+            p{
+                color: $gray;
+                font-size: 13px;
+            }
+
+            input, textarea{
+                border: 1px solid lighten($third, 10);
+                border-radius: 10px;
+                width: 100%;
+                padding-left:5px;
+                height: 40px;
+                margin-bottom: 20px;
+                cursor: pointer;
+                &:focus{
+                    outline: 2px solid $second;
+                }
+            }
+            textarea{
+                height: 100px;
+                padding-top: 10px;
+            }
+
+            ::placeholder{
+                font-size: 10px;
+                color: $third;
+            }
+        }
+    }
+
+    &_picturesContainer {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        .pictures{
+            width: 150px;
+            height: 150px;
+            border: 1px solid lighten($third, 10);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                font-size: 20px;
+                color: $third;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+        }
+    }
+    button{
+        width: 50%;
+        height: 60px;
+        border-radius: 25px;
+        border: 1px solid $main;
+        font-size: 16px;
+        font-weight: 300;
+        background-color: transparent;
+        margin: 30px auto;
+        cursor: pointer;
+        transition: all 500ms ease;
+
+        &:hover{
+            color: #FFF;
+            border: none;
+            background-color: $second;
+        }
+    }
+    
 }

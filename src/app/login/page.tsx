@@ -1,15 +1,14 @@
 'use client'
+
 import Image from "next/image";
 import LoginComponent from "@/app/login/loginComponent/LoginComponent";
-import { useContext } from "react";
-import AdminContext from "@/context/AdminContext";
+import { useGlobalAdminContext } from "@/context/AdminContext";
 
 const page = () => {
-const {adminMode, setAdminMode} = useContext(AdminContext)
+const {adminMode, setAdminMode} = useGlobalAdminContext()
 
 const handleCLick = () => {
     setAdminMode(!adminMode)
-    console.log(adminMode)
 
 }
     return (
