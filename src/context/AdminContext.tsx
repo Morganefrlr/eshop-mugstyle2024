@@ -1,4 +1,6 @@
 'use client'
+import { emptyProduct } from "@/fakeData/fakeData";
+import { ProductType } from "@/fakeData/typeData";
 import { createContext, useContext } from "react";
 
 
@@ -12,6 +14,9 @@ export type GlobalAdminContext = {
 
     adminPanelSelected : string,
     setAdminPanelSelected:(c:string) => void,
+
+    productToEdit : ProductType,
+    setProductToEdit:(c:ProductType) => void,
 }
 
 
@@ -28,6 +33,9 @@ export const AdminContext = createContext<GlobalAdminContext>({
 
     adminPanelSelected : 'edit',
     setAdminPanelSelected:() => {},
+
+    productToEdit : emptyProduct,
+    setProductToEdit:() => {},
 })
 
 

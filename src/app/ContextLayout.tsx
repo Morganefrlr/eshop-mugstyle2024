@@ -4,6 +4,8 @@ import Navbar from '@/components/navbar/Navbar';
 import { ReactNode, useState } from 'react';
 import { Rubik } from "next/font/google";
 import {AdminContext} from '@/context/AdminContext';
+import { emptyProduct } from '@/fakeData/fakeData';
+import { ProductType } from '@/fakeData/typeData';
 
 
 const rubik = Rubik({ subsets: ["latin"] });
@@ -17,6 +19,7 @@ const ContextLayout = ({children} : Props) => {
     const [adminMode, setAdminMode] = useState<boolean>(true)
     const [adminPanel, setAdminPanel] = useState<boolean>(false)
     const [adminPanelSelected, setAdminPanelSelected] = useState<string>('edit')
+    const [productToEdit,setProductToEdit] = useState<ProductType>(emptyProduct)
 
 
     
@@ -27,6 +30,8 @@ const ContextLayout = ({children} : Props) => {
         setAdminPanel,
         adminPanelSelected,
         setAdminPanelSelected,
+        productToEdit,
+        setProductToEdit
     }
 
 
