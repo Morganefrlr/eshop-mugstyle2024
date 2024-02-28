@@ -1,26 +1,28 @@
-import { singleProduct } from '@/fakeData/fakeData';
+
 import Image from 'next/image';
 import DescInputsContainer from './DescInputsContainer';
 import DetailsInputsContainer from './DetailsInputsContainer';
 import PicturesFormContainer from './PicturesFormContainer';
+import { ProductType } from '@/fakeData/typeData';
 
 
 type Props = {
-    submit: string
+    submit: string,
+    product: ProductType
 }
-const Form = ({submit }: Props) => {
+const Form = ({submit, product }: Props) => {
 
-    const product = false
+    
 
 
     return (
                 <form className='formMain' typeof='submit'>
                     <div className='formMain_imageContainer'>
-                       {product ? (<Image src={singleProduct.cover} alt='' width={200} height={200} />) : (<p>+</p>)}
+                       {product.cover ? (<Image src={product.cover} alt='' width={200} height={200} />) : (<p>+</p>)}
                     </div>
-                    <DescInputsContainer />
-                    <DetailsInputsContainer />
-                    <PicturesFormContainer />
+                    <DescInputsContainer title={product.title} desc={product.desc} detail={product.detail}/>
+                    <DetailsInputsContainer capacity={product.capacity} width={product.width} height={product.height} material={product.material} color={product.color} mugType={product.mugType}/>
+                    <PicturesFormContainer pictures={product.pictures}/>
                     <button>{submit}</button>
                 </form>
     );

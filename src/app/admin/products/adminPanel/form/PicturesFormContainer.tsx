@@ -1,26 +1,24 @@
 import { singleProduct } from '@/fakeData/fakeData';
 import Image from 'next/image';
+import { it } from 'node:test';
 import React from 'react';
 
-const PicturesFormContainer = () => {
-    const product = false
+
+
+const PicturesFormContainer = ({pictures} : {pictures:string[]}) => {
+     
     return (
         <div className='formMain_picturesContainer'>
-            <div className='pictures'>
-                {product ? (<Image src={singleProduct.cover} alt='' width={200} height={200} />) : (<p>+</p>)}
-            </div>
-            <div className='pictures'>
-                {product ? (<Image src={singleProduct.cover} alt='' width={200} height={200} />) : (<p>+</p>)}
-            </div>
-            <div className='pictures'>
-                {product ? (<Image src={singleProduct.cover} alt='' width={200} height={200} />) : (<p>+</p>)}
-            </div>
-            <div className='pictures'>
-                {product ? (<Image src={singleProduct.cover} alt='' width={200} height={200} />) : (<p>+</p>)}
-            </div>
-            <div className='pictures'>
-                {product ? (<Image src={singleProduct.cover} alt='' width={200} height={200} />) : (<p>+</p>)}
-            </div>
+            {pictures.map(item =>
+                <div className='pictures' key={item}>
+                    <Image src={item} alt='' width={200} height={200} />
+                </div>
+            )}
+            {pictures.length === 0 && 
+                <div className='pictures'>
+                    <p>+</p>
+                </div>
+            }
         </div>
     );
 };
