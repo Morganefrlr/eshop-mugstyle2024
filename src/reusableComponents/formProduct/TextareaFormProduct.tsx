@@ -1,11 +1,12 @@
 type Props = {
     label: string,
+    value: string
 }
-const TextareaFormProduct = ({label} : Props) => {
+const TextareaFormProduct = ({label, value} : Props) => {
     return (
         <>
            <p>{label}</p>
-           <textarea placeholder={label}></textarea>
+           <textarea placeholder={label} value={value}></textarea>
         </>
     );
 };

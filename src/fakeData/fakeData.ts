@@ -2,7 +2,24 @@ import { ProductType} from "./typeData";
 
 
 
-
+export const emptyProduct = {
+    id: 0,
+    title:"",
+    cover: "",
+    price: 0,
+    pictures: [],
+    slug: "",
+    capacity: 0,
+    width: 0,
+    height: 0,
+    material: "",
+    color: "",
+    mugType: "", 
+    desc: "",
+    detail: "", 
+    views:0,
+    isFeatured :false,
+}
 
 
 export const singleProduct: ProductType = {

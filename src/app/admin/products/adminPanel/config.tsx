@@ -17,31 +17,44 @@ export const adminPanelConfig = [
     },
 ]
 
+type Props = {
+    capacity: number,
+    width: number,
+    height: number,
+    material: string,
+    color: string,
+    mugType: string, 
+}
 
-
-export const formCatConfig = [
+export const formCatConfig = ({capacity, width, height, material, color, mugType} : Props) => [
     {
         label:"Mug Type",
-        type:"text"
+        type:"text",
+        value:mugType,
     },
     {
         label:"Material",
-        type:"text"
+        type:"text",
+        value:material,
     },
     {
         label:"Color",
-        type:"text"
+        type:"text",
+        value:color,
     },
     {
         label:"Capacity",
-        type:"number"
+        type:"number",
+        value:capacity,
     },
     {
         label:"Height(ml)",
-        type:"number"
+        type:"number",
+        value:height,
     },
     {
         label:"Width(cm)",
-        type:"number"
+        type:"number",
+        value:width,
     },
 ]
