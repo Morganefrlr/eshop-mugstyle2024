@@ -17,3 +17,11 @@ export type ProductType = {
     isFeatured? : boolean
 }
 
+export type OrderType = {
+    id: number,
+    createdAt: string,
+    customer: string,
+    location: string,
+    price: number,
+    status: string
+}
