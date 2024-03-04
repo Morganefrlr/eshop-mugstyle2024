@@ -301,7 +301,7 @@ export const ordersList: OrderType[] = [
         createdAt: "16 January 2024",
         customer: "John Doe",
         location: "Paris",
-        price: 126.60,
+        price: "126.60",
         status: "Arrived"
     },
     {
@@ -309,7 +309,7 @@ export const ordersList: OrderType[] = [
         createdAt: "14 Febuary  2024",
         customer: "John Doe",
         location: "Paris",
-        price: 240.30,
+        price: "240.30",
         status: "Arrived"
     },
     {
@@ -317,7 +317,7 @@ export const ordersList: OrderType[] = [
         createdAt: "10 March 2024",
         customer: "John Doe",
         location: "Paris",
-        price: 103,
+        price: "103",
         status: "On Deliver"
     },
     {
@@ -325,7 +325,7 @@ export const ordersList: OrderType[] = [
         createdAt: "26 April 2024",
         customer: "John Doe",
         location: "Paris",
-        price: 126.60,
+        price: "126.60",
         status: "Arrived"
     },
     {
@@ -333,7 +333,7 @@ export const ordersList: OrderType[] = [
         createdAt: "24 May 2024",
         customer: "John Doe",
         location: "Paris",
-        price: 126.60,
+        price: "126.60",
         status: "On Deliver"
     },
     {
@@ -341,7 +341,7 @@ export const ordersList: OrderType[] = [
         createdAt: "12 June 2024",
         customer: "John Doe",
         location: "Paris",
-        price: 126.60,
+        price: "126.60",
         status: "On Deliver"
     },
     {
@@ -349,7 +349,7 @@ export const ordersList: OrderType[] = [
         createdAt: "14 July 2024",
         customer: "John Doe",
         location: "Paris",
-        price: 126.60,
+        price: "126.60",
         status: "Arrived"
     },
     {
@@ -357,7 +357,7 @@ export const ordersList: OrderType[] = [
         createdAt: "15 August 2024",
         customer: "John Doe",
         location: "Paris",
-        price: 290,
+        price: "290",
         status: "Arrived"
     },
     {
@@ -365,7 +365,7 @@ export const ordersList: OrderType[] = [
         createdAt: "1 September 2024",
         customer: "John Doe",
         location: "Paris",
-        price: 107.50,
+        price: "107.50",
         status: "On Payment"
     },
     {
@@ -373,7 +373,7 @@ export const ordersList: OrderType[] = [
         createdAt: "30 October 2024",
         customer: "John Doe",
         location: "Paris",
-        price: 450.60,
+        price: "450.60",
         status: "Arrived"
     },
     {
@@ -381,7 +381,7 @@ export const ordersList: OrderType[] = [
         createdAt: "3 November 2024",
         customer: "John Doe",
         location: "Paris",
-        price: 115.25,
+        price: "115.25",
         status: "On Payment"
     },
 ]

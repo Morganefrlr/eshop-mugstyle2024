@@ -22,6 +22,6 @@ export type OrderType = {
     createdAt: string,
     customer: string,
     location: string,
-    price: number,
+    price: string,
     status: string
 }

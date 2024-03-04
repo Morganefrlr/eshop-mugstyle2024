@@ -25,41 +25,33 @@
         }
         tbody{
             tr:nth-child(odd){
-             background-color: lighten($third, 10);
+                background-color: lighten($third, 10);
             }
-            tr{
                 td{
                     height: 3rem;
                     padding: 5px;
                     font-size: 14px;
                 }
-            }
         }
     }
 }
 
-
+.Payment, .Deliver, .Arrived{
+    width: fit-content;
+    border-radius: 25px;
+    padding: 8px 15px;
+    font-size: 12px;
+}
 .Payment, .Deliver{
-    div{
-        width: fit-content;
-        background-color: rgba(253, 193, 81, 0.303); 
-        color: orange;
-        border-radius: 25px;
-        padding: 8px 15px;
-        font-size: 12px;
-    }
+    background-color: rgba(253, 193, 81, 0.303); 
+    color: orange;
 }
 
 
 .Arrived{
-    div{
-        width: fit-content;
-        background-color: rgba(127, 235, 181, 0.488); 
-        color: rgb(79, 152, 115);
-        border-radius: 25px;
-        padding: 5px 15px;
-        font-size: 12px;
-    }
+    background-color: rgba(127, 235, 181, 0.488); 
+    color: rgb(79, 152, 115);
+    
 }
 
 
