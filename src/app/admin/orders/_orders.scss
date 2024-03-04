@@ -1,0 +1,65 @@
+.ordersMain{
+    width: 70vw;
+    margin: 50px auto;
+    table{
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 0.5rem;
+
+        thead{
+            background-color:lighten($third, 10);
+            height: 3rem;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: $gray;
+            
+            th{
+                font-weight: 400;
+                padding: 5px;
+            }
+            .icon{
+                margin-left: 10px;
+                font-size: 12px;
+            }
+        }
+        tbody{
+            tr:nth-child(odd){
+             background-color: lighten($third, 10);
+            }
+            tr{
+                td{
+                    height: 3rem;
+                    padding: 5px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+
+.Payment, .Deliver{
+    div{
+        width: fit-content;
+        background-color: rgba(253, 193, 81, 0.303); 
+        color: orange;
+        border-radius: 25px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+
+
+.Arrived{
+    div{
+        width: fit-content;
+        background-color: rgba(127, 235, 181, 0.488); 
+        color: rgb(79, 152, 115);
+        border-radius: 25px;
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+}
+
+
