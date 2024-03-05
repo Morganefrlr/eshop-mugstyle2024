@@ -1,5 +1,6 @@
 import Slider from '@/components/slider/Slider';
-import TopSideLeft from './TopSideLeft';
+import TopSideRight from './TopSideRight';
+
 
 
 
@@ -17,7 +18,7 @@ const TopSide = ({images, desc, title, price} : Props) => {
         <div className="productPageTop_rightSide">
             <Slider images={images}/>
         </div>
-        <TopSideLeft desc={desc} title={title} price={price}/>
+        <TopSideRight desc={desc} title={title} price={price}/>
     </div>
     );
 };
