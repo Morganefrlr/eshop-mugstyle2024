@@ -12,7 +12,7 @@ export default function AdminLayout({
   const {adminMode} = useGlobalAdminContext()
 
 
-  if(adminMode !== true) return <div>You are not allowed!!</div>
+  if(adminMode !== true) return <div className="adminMessage">You are not allowed!!!</div>
 
 
   return (

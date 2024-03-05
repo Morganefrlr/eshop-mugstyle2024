@@ -16,7 +16,7 @@ type Props ={
 
 const ContextLayout = ({children} : Props) => {
 
-    const [adminMode, setAdminMode] = useState<boolean>(true)
+    const [adminMode, setAdminMode] = useState<boolean>(false)
     const [adminPanel, setAdminPanel] = useState<boolean>(false)
     const [adminPanelSelected, setAdminPanelSelected] = useState<string>('edit')
     const [productToEdit,setProductToEdit] = useState<ProductType>(emptyProduct)
