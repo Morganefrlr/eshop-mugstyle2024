@@ -1,15 +1,14 @@
+
 import Price from "./Price";
-
-
 
 type Props={
     desc:string,
     title:string,
     price:number,
 }
-const TopSideRight = ({ desc, title, price} : Props) => {
-   
 
+
+const TopSideRight = ({ desc, title, price} : Props) => {
 
     return (
         <div className="productPageTop_leftSide">
