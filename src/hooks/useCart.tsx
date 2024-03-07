@@ -1,5 +1,6 @@
 import { ProductType } from "@/fakeData/typeData"
 import { deepCloneArray, findInArray, findIndexInArray } from "@/utils/array"
+import { setLocalStorage } from "@/utils/localStorage"
 import { useState } from "react"
 
 
@@ -22,7 +23,7 @@ export const useCart = () => {
 
             const newCart = [productToAdd, ...cartClone]
             setCart(newCart)
-
+            setLocalStorage("products" , newCart)
             return
         }
         if(isAlreadyInCart){
@@ -30,6 +31,7 @@ export const useCart = () => {
             const indexProduct = findIndexInArray(productToCart.slug, cartClone)
             cartClone[indexProduct].quantity = cartClone[indexProduct].quantity + quantity;
             setCart(cartClone)
+            setLocalStorage("products" , cartClone)
         }
 
 
