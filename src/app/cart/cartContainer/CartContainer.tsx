@@ -1,23 +1,21 @@
-import { featuredProducts } from '@/fakeData/fakeData';
-import ProductCart from './ProductCart';
-import { rightSideCartConfig } from './rightSideCartConfig';
-import TotalCartSide from './TotalCartSide';
+'use client'
+import { useGlobalAdminContext } from '@/context/AdminContext';
+import CartLeftSide from './cartLeftSide/CartLeftSide';
+import CartRightSide from './cartRightSide/CartRightSide';
 
 
 const CartContainer = () => {
+    const { cart } = useGlobalAdminContext()
+
     
     return (
         <div className='cartBottom'>
             <div className='cartBottom_leftSide'>
-                {featuredProducts.map(item =>
-                    <ProductCart key={item.id} cover={item.cover} title={item.title} price={item.price} />
-                )}
+                <CartLeftSide cart={cart}/>
             </div>
             <hr />
             <div className='cartBottom_rightSide'>
-                {rightSideCartConfig.map(item =>
-                    <TotalCartSide key={item.label} label={item.label} quantity={item.quantity}/>
-                )}
+                <CartRightSide />
             </div>
         </div>
     );

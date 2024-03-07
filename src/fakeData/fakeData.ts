@@ -19,6 +19,7 @@ export const emptyProduct = {
     detail: "", 
     views:0,
     isFeatured :false,
+    quantity:1
 }
 
 
@@ -40,6 +41,7 @@ export const singleProduct: ProductType = {
     mugType: "tea", 
     detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
     desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+    quantity: 1,
 }
 
 
@@ -61,6 +63,7 @@ export const featuredProducts: ProductType[] =[ {
     mugType: "tea", 
     detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
     desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+    quantity: 1,
 },{
     id:3,
     title:"The frozen pineapple",
@@ -79,6 +82,7 @@ export const featuredProducts: ProductType[] =[ {
     mugType: "tea", 
     detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
     desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+    quantity: 1,
 }]
 
 
@@ -102,6 +106,7 @@ export const allProducts: ProductType[] = [
         mugType: "tea", 
         detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
         desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+        quantity: 1,
     },
     {
         id:2,
@@ -121,6 +126,7 @@ export const allProducts: ProductType[] = [
         mugType: "tea", 
         detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
         desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+        quantity: 1,
     },
     {
         id:3,
@@ -140,6 +146,7 @@ export const allProducts: ProductType[] = [
         mugType: "tea", 
         detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
         desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+        quantity: 1,
     },
     {
         id:4,
@@ -159,6 +166,7 @@ export const allProducts: ProductType[] = [
         mugType: "tea", 
         detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
         desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+        quantity: 1,
     },
     {
         id:5,
@@ -178,6 +186,7 @@ export const allProducts: ProductType[] = [
         mugType: "tea", 
         detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
         desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+        quantity: 1,
     },
     {
         id:6,
@@ -197,6 +206,7 @@ export const allProducts: ProductType[] = [
         mugType: "tea", 
         detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
         desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+        quantity: 1,
     },
     {
         id:7,
@@ -216,6 +226,7 @@ export const allProducts: ProductType[] = [
         mugType: "tea", 
         detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
         desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+        quantity: 1,
     },
     {
         id:8,
@@ -235,6 +246,7 @@ export const allProducts: ProductType[] = [
         mugType: "tea", 
         detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
         desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+        quantity: 1,
     },
     {
         id:9,
@@ -254,6 +266,7 @@ export const allProducts: ProductType[] = [
         mugType: "tea", 
         detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
         desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+        quantity: 1,
     },
     {
         id:10,
@@ -273,6 +286,7 @@ export const allProducts: ProductType[] = [
         mugType: "tea", 
         detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
         desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+        quantity: 1,
     },
     {
         id:11,
@@ -292,6 +306,7 @@ export const allProducts: ProductType[] = [
         mugType: "tea", 
         detail:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero. Vestibulum fringilla metus metus, et vestibulum eros sagittis ac. Aliquam bibendum quam arcu, non convallis ligula iaculis ac. In vitae ipsum et diam commodo tincidunt. Vivamus tincidunt ullamcorper justo. Praesent interdum tempus ipsum at porta. Cras quis auctor erat.",
         desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem libero, feugiat quis scelerisque sit amet, ultrices eu purus. Morbi lacinia neque libero.",
+        quantity: 1,
     },
 ]
 

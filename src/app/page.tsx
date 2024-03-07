@@ -6,8 +6,8 @@ import { allProducts, featuredProducts } from "@/fakeData/fakeData";
 import Newsletter from "@/components/newsletter/Newsletter";
 
 
-export default function Home() {
 
+export default function Home() {
 
   
 

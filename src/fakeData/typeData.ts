@@ -14,7 +14,8 @@ export type ProductType = {
     desc?: string,
     detail?: string, 
     views?:number,
-    isFeatured? : boolean
+    isFeatured? : boolean,
+    quantity: number
 }
 
 export type OrderType = {
