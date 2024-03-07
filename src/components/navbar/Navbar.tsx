@@ -12,7 +12,7 @@ import  { useGlobalAdminContext } from "@/context/AdminContext";
 
 const Navbar = () => {
 
-    const {adminMode} = useGlobalAdminContext()
+    const {adminMode, quantityProducts} = useGlobalAdminContext()
     const [open, setOpen] = useState(false)
 
     const handleMenuResponsive = () =>{
@@ -30,7 +30,7 @@ const Navbar = () => {
                 <div className="cartIconNavbar">
                 {!adminMode && <>
                     <Link href="/cart"><GiShoppingBag /></Link>
-                    <div>1</div>
+                    <div>{quantityProducts}</div>
                 </>}
                     
                 </div>

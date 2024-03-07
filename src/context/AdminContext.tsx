@@ -23,6 +23,9 @@ export type GlobalAdminContext = {
     setCart:(a:ProductType[]) => void,
 
     handleAddProductToCart:(a:ProductType, b:number) => void,
+
+    quantityProducts : number,
+    setQuantityProducts:(a:number) => void,
 }
 
 
@@ -46,7 +49,10 @@ export const AdminContext = createContext<GlobalAdminContext>({
     cart:[],
     setCart: () => {},
 
-    handleAddProductToCart: () => {}
+    handleAddProductToCart: () => {},
+
+    quantityProducts : 0,
+    setQuantityProducts:() => {},
 })
 
 
