@@ -1,3 +1,4 @@
+import { formatPrice } from '@/utils/math';
 import Image from 'next/image';
 
 type Props ={
@@ -15,7 +16,7 @@ const ProductCart = ({cover, title, price,quantity} : Props) => {
                     <Image src={cover} alt='' width={200} height={200} />
                     <div className='boxText'>
                         <h4>{title}</h4>
-                        <p>${price * quantity}</p>
+                        <p>${formatPrice(price * quantity)}</p>
                         <p>Remove</p>
                     </div>
                 </div>

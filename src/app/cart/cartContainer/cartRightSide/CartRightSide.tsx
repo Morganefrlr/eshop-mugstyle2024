@@ -1,4 +1,5 @@
 
+import { formatPrice } from '@/utils/math';
 import { rightSideCartConfig } from './rightSideCartConfig';
 import TotalCartSide from './TotalCartSide';
 
@@ -7,9 +8,11 @@ type Props = {
     totalPrice: number
 }
 const CartRightSide = ({quantity, totalPrice} : Props) => {
+
+    const taxes = formatPrice((totalPrice / 100 )* 20)
+    const config = rightSideCartConfig(quantity, formatPrice(totalPrice), taxes)
+
     
-    const taxes = (totalPrice / 100 )* 20
-    const config = rightSideCartConfig(quantity, totalPrice, taxes)
     return (
         <>
             {config.map(item =>

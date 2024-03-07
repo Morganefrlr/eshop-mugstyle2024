@@ -2,8 +2,8 @@
 import Quantity from '@/components/quantity/Quantity';
 import { useGlobalAdminContext } from '@/context/AdminContext';
 import{ allProducts } from '@/fakeData/fakeData';
-import { ProductType } from '@/fakeData/typeData';
 import { findInArray } from '@/utils/array';
+import { formatPrice } from '@/utils/math';
 import { useState } from 'react';
 
 
@@ -27,9 +27,10 @@ const Price = ({price, slug} : {price :number, slug: string}) => {
         }
      }
 
+    
     return (
         <>
-            <p className="productPagePrice">${price * quantity}</p>
+            <p className="productPagePrice">${formatPrice(price * quantity)}</p>
             <Quantity handleQuantity={handleQuantity} quantity={quantity} handleCart={sendToCart}/>
         </>
     );

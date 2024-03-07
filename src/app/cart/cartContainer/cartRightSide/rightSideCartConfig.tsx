@@ -1,4 +1,4 @@
-export const rightSideCartConfig = (quantity: number, totalPrice: number, taxes: number) => [
+export const rightSideCartConfig = (quantity: number, totalPrice: string, taxes: string) => [
     {
         label: 'Articles:',
         quantity:quantity,
