@@ -26,6 +26,9 @@ export type GlobalAdminContext = {
 
     quantityProducts : number,
     setQuantityProducts:(a:number) => void,
+
+    totalPrice : number,
+    setTotalPrice:(a:number) => void,
 }
 
 
@@ -53,6 +56,9 @@ export const AdminContext = createContext<GlobalAdminContext>({
 
     quantityProducts : 0,
     setQuantityProducts:() => {},
+
+    totalPrice : 0,
+    setTotalPrice:() => {},
 })
 
 

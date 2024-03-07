@@ -3,14 +3,17 @@ import { rightSideCartConfig } from './rightSideCartConfig';
 import TotalCartSide from './TotalCartSide';
 
 type Props = {
-    quantity: number
+    quantity: number,
+    totalPrice: number
 }
-const CartRightSide = ({quantity} : Props) => {
-const config = rightSideCartConfig(quantity)
+const CartRightSide = ({quantity, totalPrice} : Props) => {
+    
+    const taxes = (totalPrice / 100 )* 20
+    const config = rightSideCartConfig(quantity, totalPrice, taxes)
     return (
         <>
             {config.map(item =>
-                    <TotalCartSide key={item.label} label={item.label} quantity={item.quantity}/>
+                    <TotalCartSide key={item.label} label={item.label} quantity={item.quantity} />
                 )}
         </>
     );

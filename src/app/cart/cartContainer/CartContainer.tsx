@@ -5,7 +5,7 @@ import CartRightSide from './cartRightSide/CartRightSide';
 
 
 const CartContainer = () => {
-    const { cart, quantityProducts } = useGlobalAdminContext()
+    const { cart, quantityProducts, totalPrice } = useGlobalAdminContext()
 
 
     return (
@@ -15,7 +15,7 @@ const CartContainer = () => {
             </div>
             <hr />
             <div className='cartBottom_rightSide'>
-                <CartRightSide quantity={quantityProducts}/>
+                <CartRightSide quantity={quantityProducts} totalPrice={totalPrice}/>
             </div>
         </div>
     );
