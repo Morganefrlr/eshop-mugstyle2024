@@ -19,12 +19,12 @@ const Price = ({price, slug} : {price :number, slug: string}) => {
         if(operation === 'plus') return setQuantity(prev =>(prev<9 ? prev+1 : 9))
     }
 
-    const sendToCart = async () => {
+    const sendToCart = () => {
 
         const productToCart = findInArray(slug, allProducts)
-        handleAddProductToCart(productToCart)
-        
-
+        if(productToCart){
+            handleAddProductToCart(productToCart, quantity)
+        }
      }
 
     return (

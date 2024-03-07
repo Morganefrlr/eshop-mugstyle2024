@@ -7,22 +7,22 @@ import { createContext, useContext } from "react";
 
 export type GlobalAdminContext = {
     adminMode :boolean,
-    setAdminMode:(c:boolean) => void,
+    setAdminMode:(a:boolean) => void,
 
     adminPanel :boolean,
-    setAdminPanel:(c:boolean) => void,
+    setAdminPanel:(a:boolean) => void,
 
     adminPanelSelected : string,
-    setAdminPanelSelected:(c:string) => void,
+    setAdminPanelSelected:(a:string) => void,
 
     productToEdit : ProductType,
-    setProductToEdit:(c:ProductType) => void,
+    setProductToEdit:(a:ProductType) => void,
 
 
     cart:ProductType[],
-    setCart:(c:ProductType[]) => void,
+    setCart:(a:ProductType[]) => void,
 
-    handleAddProductToCart:(c:ProductType) => void,
+    handleAddProductToCart:(a:ProductType, b:number) => void,
 }
 
 
