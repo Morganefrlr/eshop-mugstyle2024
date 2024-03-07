@@ -9,16 +9,17 @@ type Props={
     desc:string,
     title:string,
     price:number,
+    slug:string
 }
 
 
-const TopSide = ({images, desc, title, price} : Props) => {
+const TopSide = ({images, desc, title, price, slug} : Props) => {
     return (
         <div className="productPageTop">
         <div className="productPageTop_rightSide">
             <Slider images={images}/>
         </div>
-        <TopSideRight desc={desc} title={title} price={price}/>
+        <TopSideRight desc={desc} title={title} price={price} slug={slug}/>
     </div>
     );
 };

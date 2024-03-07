@@ -5,9 +5,10 @@ import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from 'react-icon
 type Props = {
     quantity: number,
     handleQuantity : (c: string) => void
+    handleCart : () => void
 
 }
-const Quantity = ({quantity,  handleQuantity} : Props) => {
+const Quantity = ({quantity,  handleQuantity, handleCart} : Props) => {
 
 
 
@@ -22,7 +23,7 @@ const Quantity = ({quantity,  handleQuantity} : Props) => {
                     <hr/>
                     <MdOutlineKeyboardArrowUp  className="icon" onClick={() => handleQuantity('plus')}/>
                 </div>
-                <button>add to cart</button>
+                <button onClick={handleCart}>add to cart</button>
             </div>
         </div>
 

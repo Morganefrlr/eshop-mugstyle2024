@@ -6,6 +6,7 @@ import { Rubik } from "next/font/google";
 import {AdminContext} from '@/context/AdminContext';
 import { emptyProduct } from '@/fakeData/fakeData';
 import { ProductType } from '@/fakeData/typeData';
+import { useCart } from '@/hooks/useCart';
 
 
 const rubik = Rubik({ subsets: ["latin"] });
@@ -21,7 +22,7 @@ const ContextLayout = ({children} : Props) => {
     const [adminPanelSelected, setAdminPanelSelected] = useState<string>('edit')
     const [productToEdit,setProductToEdit] = useState<ProductType>(emptyProduct)
 
-
+    const { cart, setCart, handleAddProductToCart } = useCart()
     
     const adminProviderValue ={
         adminMode,
@@ -31,7 +32,10 @@ const ContextLayout = ({children} : Props) => {
         adminPanelSelected,
         setAdminPanelSelected,
         productToEdit,
-        setProductToEdit
+        setProductToEdit,
+        cart,
+        setCart,
+        handleAddProductToCart
     }
 
 

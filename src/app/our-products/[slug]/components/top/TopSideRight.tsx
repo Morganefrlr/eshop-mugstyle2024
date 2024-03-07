@@ -5,17 +5,18 @@ type Props={
     desc:string,
     title:string,
     price:number,
+    slug: string
 }
 
 
-const TopSideRight = ({ desc, title, price} : Props) => {
+const TopSideRight = ({ desc, title, price, slug} : Props) => {
 
     return (
         <div className="productPageTop_leftSide">
             <h1>{title}</h1>
             <p>by: MugStyle</p>
             <span>{desc}</span>
-            <Price price={price}/>
+            <Price price={price} slug={slug}/>
         </div>
     );
 };

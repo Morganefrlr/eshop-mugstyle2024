@@ -1,7 +1,8 @@
-import { singleProduct, allProducts } from "@/fakeData/fakeData";
+import { singleProduct} from "@/fakeData/fakeData";
 import TopSide from "./components/top/TopSide";
 import BottomSide from "./components/bottom/BottomSide";
 import Newsletter from "@/components/newsletter/Newsletter";
+
 
 
 
@@ -12,9 +13,7 @@ const page = ({params} : {params : {slug : string}}) => {
 
     const {slug} = params
 
-    const sendToCart = () => {
-       // const productToCart = 
-    }
+
     
     return (
         <>
@@ -24,6 +23,7 @@ const page = ({params} : {params : {slug : string}}) => {
                     desc={singleProduct.desc} 
                     title={singleProduct.title} 
                     price={singleProduct.price} 
+                    slug={slug}
                 />
 
                 <BottomSide 
