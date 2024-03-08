@@ -1,11 +1,11 @@
 type Props ={
-    detail: string,
-    mugType:string,
-    material:string,
-    color : string,
-    capacity: number,
-    height:number,
-    width:number
+    detail: string | any,
+    mugType:string | any,
+    material:string | any,
+    color : string | any,
+    capacity: number | any,
+    height:number | any,
+    width:number | any
 }
 
 const BottomSide = ({detail,mugType,material,color,capacity,height,width}:Props) => {

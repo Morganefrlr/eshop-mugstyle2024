@@ -5,8 +5,8 @@ import TopSideRight from './TopSideRight';
 
 
 type Props={
-    images: string[],
-    desc:string,
+    images: string[] | any,
+    desc:string | any,
     title:string,
     price:number,
     slug:string

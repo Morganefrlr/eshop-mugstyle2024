@@ -3,12 +3,15 @@
 import Image from "next/image";
 import LoginComponent from "@/app/login/loginComponent/LoginComponent";
 import { useGlobalAdminContext } from "@/context/AdminContext";
+import { useRouter } from 'next/navigation'
 
 const page = () => {
-const {adminMode, setAdminMode} = useGlobalAdminContext()
+const {setAdminMode} = useGlobalAdminContext()
+const router = useRouter()
 
 const handleCLick = () => {
-    setAdminMode(!adminMode)
+    setAdminMode(true)
+    router.push('/admin')
 
 }
     return (
