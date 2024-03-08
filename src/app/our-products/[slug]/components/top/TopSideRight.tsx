@@ -1,22 +1,24 @@
-import Quantity from '@/components/quantity/Quantity';
 
+import Price from "./Price";
 
 type Props={
     desc:string,
     title:string,
     price:number,
+    slug: string
 }
-const TopSideLeft = ({ desc, title, price} : Props) => {
+
+
+const TopSideRight = ({ desc, title, price, slug} : Props) => {
 
     return (
         <div className="productPageTop_leftSide">
             <h1>{title}</h1>
             <p>by: MugStyle</p>
             <span>{desc}</span>
-            <p className="productPagePrice">${price}</p>
-            <Quantity />
+            <Price price={price} slug={slug}/>
         </div>
     );
 };
 
-export default TopSideLeft;
+export default TopSideRight;

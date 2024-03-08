@@ -1,9 +1,14 @@
-'use client'
-import { useState } from 'react';
+
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from 'react-icons/md';
 
-const Quantity = () => {
-    const [quantity, setQuantity] = useState(1)
+
+type Props = {
+    quantity: number,
+    handleQuantity : (c: string) => void
+    handleCart : () => void
+
+}
+const Quantity = ({quantity,  handleQuantity, handleCart} : Props) => {
 
 
 
@@ -12,13 +17,13 @@ const Quantity = () => {
             <p>quantity</p>
             <div className="quantityMain_container">
                 <div>
-                    <MdOutlineKeyboardArrowDown className="icon" onClick={() => setQuantity(prev =>(prev>1 ? prev-1 : 1))}/>
+                    <MdOutlineKeyboardArrowDown className="icon" onClick={() => handleQuantity('minus')}/>
                     <hr/>
                     <p>{quantity}</p>
                     <hr/>
-                    <MdOutlineKeyboardArrowUp  className="icon" onClick={() => setQuantity(prev =>(prev<9 ? prev+1 : 9))}/>
+                    <MdOutlineKeyboardArrowUp  className="icon" onClick={() => handleQuantity('plus')}/>
                 </div>
-                <button>add to cart</button>
+                <button onClick={handleCart}>add to cart</button>
             </div>
         </div>
 

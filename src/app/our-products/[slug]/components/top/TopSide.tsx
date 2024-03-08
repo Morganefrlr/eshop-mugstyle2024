@@ -1,23 +1,25 @@
 import Slider from '@/components/slider/Slider';
-import TopSideLeft from './TopSideLeft';
+import TopSideRight from './TopSideRight';
+
 
 
 
 type Props={
-    images: string[],
-    desc:string,
+    images: string[] | any,
+    desc:string | any,
     title:string,
     price:number,
+    slug:string
 }
 
 
-const TopSide = ({images, desc, title, price} : Props) => {
+const TopSide = ({images, desc, title, price, slug} : Props) => {
     return (
         <div className="productPageTop">
         <div className="productPageTop_rightSide">
             <Slider images={images}/>
         </div>
-        <TopSideLeft desc={desc} title={title} price={price}/>
+        <TopSideRight desc={desc} title={title} price={price} slug={slug}/>
     </div>
     );
 };

@@ -7,16 +7,30 @@ import { createContext, useContext } from "react";
 
 export type GlobalAdminContext = {
     adminMode :boolean,
-    setAdminMode:(c:boolean) => void,
+    setAdminMode:(a:boolean) => void,
 
     adminPanel :boolean,
-    setAdminPanel:(c:boolean) => void,
+    setAdminPanel:(a:boolean) => void,
 
     adminPanelSelected : string,
-    setAdminPanelSelected:(c:string) => void,
+    setAdminPanelSelected:(a:string) => void,
 
     productToEdit : ProductType,
-    setProductToEdit:(c:ProductType) => void,
+    setProductToEdit:(a:ProductType) => void,
+
+
+    cart:ProductType[],
+    setCart:(a:ProductType[]) => void,
+
+    handleAddProductToCart:(a:ProductType, b:number) => void,
+
+    quantityProducts : number,
+    setQuantityProducts:(a:number) => void,
+
+    totalPrice : number,
+    setTotalPrice:(a:number) => void,
+
+    handleDeleteProductToCart:(a:string) => void
 }
 
 
@@ -25,7 +39,7 @@ export type GlobalAdminContext = {
 
 
 export const AdminContext = createContext<GlobalAdminContext>({
-    adminMode : true,
+    adminMode : false,
     setAdminMode: () => {},
 
     adminPanel : false,
@@ -36,6 +50,19 @@ export const AdminContext = createContext<GlobalAdminContext>({
 
     productToEdit : emptyProduct,
     setProductToEdit:() => {},
+
+    cart:[],
+    setCart: () => {},
+
+    handleAddProductToCart: () => {},
+
+    quantityProducts : 0,
+    setQuantityProducts:() => {},
+
+    totalPrice : 0,
+    setTotalPrice:() => {},
+
+    handleDeleteProductToCart: () => {},
 })
 
 
