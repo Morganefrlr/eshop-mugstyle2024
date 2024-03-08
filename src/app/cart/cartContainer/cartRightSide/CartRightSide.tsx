@@ -5,7 +5,8 @@ import TotalCartSide from './TotalCartSide';
 
 type Props = {
     quantity: number,
-    totalPrice: number
+    totalPrice: number,
+
 }
 const CartRightSide = ({quantity, totalPrice} : Props) => {
 

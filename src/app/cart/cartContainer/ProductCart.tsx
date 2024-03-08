@@ -5,11 +5,13 @@ type Props ={
     cover: string,
     title: string,
     price: number,
-    quantity: number
+    quantity: number,
+    slug:string,
+    deleteBtn: (a:string) => void,
 }
 
 
-const ProductCart = ({cover, title, price,quantity} : Props) => {
+const ProductCart = ({cover, title, price,quantity,slug,deleteBtn} : Props) => {
     return (
             <div className='productCart'>
                 <div className='box'>
@@ -17,7 +19,7 @@ const ProductCart = ({cover, title, price,quantity} : Props) => {
                     <div className='boxText'>
                         <h4>{title}</h4>
                         <p>${formatPrice(price * quantity)}</p>
-                        <p>Remove</p>
+                        <p onClick={() => deleteBtn(slug)}>Remove</p>
                     </div>
                 </div>
                 <div className='cartProductQuantity'>{quantity}</div>

@@ -6,17 +6,18 @@ import { ProductType } from "@/fakeData/typeData";
 
 
 type Props = {
-    cart : ProductType[]
+    cart : ProductType[],
+    deleteBtn: (a:string) => void,
 } 
 
 
-const CartLeftSide = ({cart}: Props) => {
+const CartLeftSide = ({cart, deleteBtn}: Props) => {
 
 
     return (
         <>
         {cart.length !== 0 ? 
-        (<ListCartProducts cart={cart}/>)
+        (<ListCartProducts cart={cart} deleteBtn={deleteBtn}/>)
         :
         (<EmptyCart/>)
          

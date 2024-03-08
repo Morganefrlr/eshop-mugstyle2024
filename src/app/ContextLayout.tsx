@@ -22,7 +22,7 @@ const ContextLayout = ({children} : Props) => {
     const [adminPanelSelected, setAdminPanelSelected] = useState<string>('edit')
     const [productToEdit,setProductToEdit] = useState<ProductType>(emptyProduct)
 
-    const { cart, setCart, handleAddProductToCart,quantityProducts, setQuantityProducts,totalPrice, setTotalPrice } = useCart()
+    const { cart, setCart, handleAddProductToCart,quantityProducts, setQuantityProducts,totalPrice, setTotalPrice,handleDeleteProductToCart } = useCart()
     
     const adminProviderValue ={
         adminMode,
@@ -39,7 +39,8 @@ const ContextLayout = ({children} : Props) => {
         quantityProducts,
         setQuantityProducts,
         totalPrice,
-        setTotalPrice
+        setTotalPrice,
+        handleDeleteProductToCart
     }
 
 

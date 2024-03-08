@@ -13,7 +13,7 @@ export const useCart = () => {
 
     const handleAddProductToCart = (productToCart : ProductType, quantity :number) =>{
 
-        const cartClone = deepCloneArray(cart)
+        const cartClone : ProductType[] = deepCloneArray(cart)
 
         const isAlreadyInCart = findInArray(productToCart.slug, cartClone)
 
@@ -59,6 +59,23 @@ export const useCart = () => {
 
     }
 
-    return {cart, setCart, handleAddProductToCart, quantityProducts, setQuantityProducts, totalPrice, setTotalPrice}
+
+
+   const handleDeleteProductToCart = (productToRemove : string) =>{
+
+        const cartClone : ProductType[] = deepCloneArray(cart)
+
+        const productToCartRemove = cartClone.filter((el : ProductType) => el.slug === productToRemove)
+        const priceToRemove = productToCartRemove[0].price * productToCartRemove[0].quantity
+
+        setTotalPrice(totalPrice - priceToRemove)
+        setQuantityProducts(quantityProducts - productToCartRemove[0].quantity)
+
+        const updatedCart = cartClone.filter((el : ProductType) => el.slug !== productToRemove)
+        setCart(updatedCart)
+
+   }
+
+    return {cart, setCart, handleAddProductToCart, quantityProducts, setQuantityProducts, totalPrice, setTotalPrice,handleDeleteProductToCart}
     
 }
