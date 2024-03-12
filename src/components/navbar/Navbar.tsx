@@ -6,25 +6,43 @@ import NavbarLinksMenu from "./NavbarLinksMenu";
 import NavbarResponsive from "./NavbarResponsive";
 import Logo from "../../reusableComponents/LogoMugStyle";
 import  { useGlobalAdminContext } from "@/context/AdminContext";
-
+import { IoMdSettings } from "react-icons/io";
+import { useRouter } from 'next/navigation'
 
 
 
 const Navbar = () => {
 
-    const {adminMode, quantityProducts} = useGlobalAdminContext()
+    const {adminMode, quantityProducts, setAdminMode} = useGlobalAdminContext()
     const [open, setOpen] = useState(false)
+    const router = useRouter()
+
 
     const handleMenuResponsive = () =>{
         setOpen(!open)
     }
 
+    const handleAdminMode = () => {
+        if(adminMode){
+            setAdminMode(!adminMode) 
+            router.push('/')
+        }
+
+        if(!adminMode){
+            setAdminMode(!adminMode) 
+            router.push('/admin')
+        }
+        
+
+        
+    }
     return (
         <div className="mainNavbar">
             <Logo/>
             <NavbarLinksMenu className={'middleContainerNavbar'} adminMode={adminMode}/>
             
             <div className="rightContainerNavbar">
+                <button className={adminMode ? 'adminMode actif' : 'adminMode '} onClick={handleAdminMode}><IoMdSettings className="icon"/></button>
                 {!adminMode && <Link href="/login">login</Link>}
 
                 <div className="cartIconNavbar">
