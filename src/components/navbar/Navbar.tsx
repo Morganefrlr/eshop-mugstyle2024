@@ -42,7 +42,7 @@ const Navbar = () => {
             <NavbarLinksMenu className={'middleContainerNavbar'} adminMode={adminMode}/>
             
             <div className="rightContainerNavbar">
-                <button className={adminMode ? 'adminMode actif' : 'adminMode '} onClick={handleAdminMode}><IoMdSettings className="icon"/></button>
+                
                 {!adminMode && <Link href="/login">login</Link>}
 
                 <div className="cartIconNavbar">
@@ -52,6 +52,7 @@ const Navbar = () => {
                 </>}
                     
                 </div>
+                <button className={adminMode ? 'adminMode actif' : 'adminMode '} onClick={handleAdminMode}><IoMdSettings className="icon"/></button>
             </div>
            
             <NavbarResponsive onClick={handleMenuResponsive} open={open}/>
