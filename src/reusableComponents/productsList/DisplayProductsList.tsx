@@ -21,6 +21,10 @@ const DisplayProductsList = ({products} : Props) => {
         await setAdminPanelSelected('edit')
         await setAdminPanel(true)
     }
+
+    const handleDeleteCard = () => {
+
+    }
     return (
         <div className='containerProducts'>
                 {products.map(item =>
@@ -32,6 +36,7 @@ const DisplayProductsList = ({products} : Props) => {
                             price={item.price} 
                             slug={item.slug}
                             handleAdmin={(e) => handleAdminModeBtn(item)}
+                            handleDelete={handleDeleteCard}
                             />
                     </div>
                 )}
