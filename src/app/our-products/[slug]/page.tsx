@@ -1,8 +1,11 @@
-import { allProducts, singleProduct} from "@/fakeData/fakeData";
+'use client'
+
+
 import TopSide from "./components/top/TopSide";
 import BottomSide from "./components/bottom/BottomSide";
 import Newsletter from "@/components/newsletter/Newsletter";
 import { findInArray } from "@/utils/array";
+import { useGlobalAdminContext } from "@/context/AdminContext";
 
 
 
@@ -13,7 +16,8 @@ import { findInArray } from "@/utils/array";
 const page = ({params} : {params : {slug : string}}) => {
 
     const {slug} = params
-    const productPage = findInArray(slug, allProducts)
+    const {products} = useGlobalAdminContext()
+    const productPage = findInArray(slug, products)
 
 
     

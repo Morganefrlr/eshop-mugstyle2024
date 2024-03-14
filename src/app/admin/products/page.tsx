@@ -1,7 +1,7 @@
 'use client'
 
 import { useGlobalAdminContext } from '@/context/AdminContext';
-import { allProducts, emptyProduct } from '@/fakeData/fakeData';
+import { emptyProduct } from '@/fakeData/fakeData';
 import DisplayProductsList from '@/reusableComponents/productsList/DisplayProductsList';
 import Title from '@/reusableComponents/title/Title';
 import AdminPanel from './adminPanel/AdminPanel';
@@ -11,7 +11,7 @@ import AdminPanel from './adminPanel/AdminPanel';
 
 const page = () => {
 
-    const {adminPanel ,setAdminPanel, setAdminPanelSelected, adminPanelSelected, setProductToEdit} = useGlobalAdminContext()
+    const {adminPanel ,setAdminPanel, setAdminPanelSelected, adminPanelSelected, setProductToEdit, products} = useGlobalAdminContext()
 
     const handleEditMode = () =>{
         setAdminPanel(false)
@@ -31,7 +31,7 @@ const page = () => {
                     <Title label={'Products'} titlePage={true}/>
                     <button onClick={handleAddPanel}>Add New Product +</button>
                 </div>
-                <DisplayProductsList products={allProducts}/>
+                <DisplayProductsList products={products}/>
             </div>
             {adminPanel && <AdminPanel handleEditMode={handleEditMode}/>}
             

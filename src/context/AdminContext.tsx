@@ -31,6 +31,11 @@ export type GlobalAdminContext = {
     setTotalPrice:(a:number) => void,
 
     handleDeleteProductToCart:(a:string) => void
+
+
+    products:ProductType[],
+    setProducts:(a:ProductType[]) => void,
+
 }
 
 
@@ -63,6 +68,10 @@ export const AdminContext = createContext<GlobalAdminContext>({
     setTotalPrice:() => {},
 
     handleDeleteProductToCart: () => {},
+
+
+    products:[],
+    setProducts: () => {},
 })
 
 
