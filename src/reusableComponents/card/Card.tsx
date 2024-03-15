@@ -23,8 +23,7 @@ const Card = ({title, cover, price, slug, adminMode,  handleAdmin, handleDelete}
     return (
         <div className='cardContainer'>
             {adminMode &&
-                    <IoCloseCircleSharp className='cardButtonSup'/>
-
+                <IoCloseCircleSharp className='cardButtonSup' onClick={(e) => handleDelete(slug)}/>
             }
             <Image alt='' src={cover} width={500} height={500} />
 
