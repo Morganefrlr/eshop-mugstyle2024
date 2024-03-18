@@ -8,6 +8,7 @@ import { emptyProduct } from '@/fakeData/fakeData';
 import { ProductType } from '@/fakeData/typeData';
 import { useCart } from '@/hooks/useCart';
 import { useProducts } from '@/hooks/useProducts';
+import {ToastContainer} from 'react-toastify'
 
 
 const rubik = Rubik({ subsets: ["latin"] });
@@ -57,6 +58,7 @@ const ContextLayout = ({children} : Props) => {
                 <Navbar/>
                 {children}
                 <Footer />
+                <ToastContainer position='bottom-right' theme='dark' autoClose={3000} />
             </body>
         </AdminContext.Provider>
     );
