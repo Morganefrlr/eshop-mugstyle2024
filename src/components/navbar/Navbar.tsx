@@ -8,6 +8,7 @@ import Logo from "../../reusableComponents/LogoMugStyle";
 import  { useGlobalAdminContext } from "@/context/AdminContext";
 import { IoMdSettings } from "react-icons/io";
 import { useRouter } from 'next/navigation'
+import { toast } from "react-toastify";
 
 
 
@@ -25,11 +26,13 @@ const Navbar = () => {
     const handleAdminMode = () => {
         if(adminMode){
             setAdminMode(!adminMode) 
+            toast.info('Admin Mode Desactivated!')
             router.push('/')
         }
 
         if(!adminMode){
             setAdminMode(!adminMode) 
+            toast.info('Admin Mode Activated!')
             router.push('/admin')
         }
         

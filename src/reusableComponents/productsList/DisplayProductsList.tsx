@@ -3,6 +3,7 @@
 import { ProductType } from '@/fakeData/typeData';
 import Card from '../card/Card';
 import { useGlobalAdminContext } from '@/context/AdminContext';
+import { toast } from 'react-toastify';
 
 
 
@@ -24,6 +25,7 @@ const DisplayProductsList = ({products} : Props) => {
 
     const handleDeleteCard = (slug:string) => {
        handleDeleteProduct(slug)
+       toast.info('Product Deleted!')
     }
 
 

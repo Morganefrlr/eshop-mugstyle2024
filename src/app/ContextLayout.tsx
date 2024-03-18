@@ -2,16 +2,13 @@
 import Footer from '@/components/footer/Footer';
 import Navbar from '@/components/navbar/Navbar';
 import { ReactNode, useState } from 'react';
-import { Rubik } from "next/font/google";
 import {AdminContext} from '@/context/AdminContext';
 import { emptyProduct } from '@/fakeData/fakeData';
 import { ProductType } from '@/fakeData/typeData';
 import { useCart } from '@/hooks/useCart';
 import { useProducts } from '@/hooks/useProducts';
 import {ToastContainer} from 'react-toastify'
-
-
-const rubik = Rubik({ subsets: ["latin"] });
+import 'react-toastify/dist/ReactToastify.css';
 
 type Props ={
     children: ReactNode
@@ -54,12 +51,10 @@ const ContextLayout = ({children} : Props) => {
     
     return (
         <AdminContext.Provider value={adminProviderValue}>
-            <body className={rubik.className}>
-                <Navbar/>
-                {children}
-                <Footer />
-                <ToastContainer position='bottom-right' theme='dark' autoClose={3000} />
-            </body>
+            <Navbar/>
+            {children}
+            <Footer />
+            <ToastContainer position="bottom-right" theme="dark" autoClose={1500} />
         </AdminContext.Provider>
     );
 };
