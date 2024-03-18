@@ -1,7 +1,6 @@
 'use client'
 import Quantity from '@/components/quantity/Quantity';
 import { useGlobalAdminContext } from '@/context/AdminContext';
-import{ allProducts } from '@/fakeData/fakeData';
 import { findInArray } from '@/utils/array';
 import { formatPrice } from '@/utils/math';
 import { useState } from 'react';
@@ -9,7 +8,7 @@ import { useState } from 'react';
 
 const Price = ({price, slug} : {price :number, slug: string}) => {
 
-    const{handleAddProductToCart} = useGlobalAdminContext()
+    const{handleAddProductToCart , products} = useGlobalAdminContext()
 
     const [quantity, setQuantity] = useState(1)
 
@@ -21,7 +20,7 @@ const Price = ({price, slug} : {price :number, slug: string}) => {
 
     const sendToCart = () => {
 
-        const productToCart = findInArray(slug, allProducts)
+        const productToCart = findInArray(slug, products)
         if(productToCart){
             handleAddProductToCart(productToCart, quantity)
         }

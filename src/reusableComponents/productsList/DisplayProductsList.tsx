@@ -13,7 +13,7 @@ type Props = {
 
 const DisplayProductsList = ({products} : Props) => {
     
-    const {adminMode, setAdminPanelSelected, setAdminPanel, setProductToEdit, productToEdit} = useGlobalAdminContext()
+    const {adminMode, setAdminPanelSelected, setAdminPanel, setProductToEdit, handleDeleteProduct} = useGlobalAdminContext()
     
     const handleAdminModeBtn = async (item: ProductType) => {
         
@@ -21,6 +21,12 @@ const DisplayProductsList = ({products} : Props) => {
         await setAdminPanelSelected('edit')
         await setAdminPanel(true)
     }
+
+    const handleDeleteCard = (slug:string) => {
+       handleDeleteProduct(slug)
+    }
+
+
     return (
         <div className='containerProducts'>
                 {products.map(item =>
@@ -32,6 +38,7 @@ const DisplayProductsList = ({products} : Props) => {
                             price={item.price} 
                             slug={item.slug}
                             handleAdmin={(e) => handleAdminModeBtn(item)}
+                            handleDelete={handleDeleteCard}
                             />
                     </div>
                 )}

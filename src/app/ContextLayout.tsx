@@ -7,6 +7,7 @@ import {AdminContext} from '@/context/AdminContext';
 import { emptyProduct } from '@/fakeData/fakeData';
 import { ProductType } from '@/fakeData/typeData';
 import { useCart } from '@/hooks/useCart';
+import { useProducts } from '@/hooks/useProducts';
 
 
 const rubik = Rubik({ subsets: ["latin"] });
@@ -23,7 +24,9 @@ const ContextLayout = ({children} : Props) => {
     const [productToEdit,setProductToEdit] = useState<ProductType>(emptyProduct)
 
     const { cart, setCart, handleAddProductToCart,quantityProducts, setQuantityProducts,totalPrice, setTotalPrice,handleDeleteProductToCart } = useCart()
-    
+    const {products, setProducts, handleDeleteProduct} = useProducts()
+
+
     const adminProviderValue ={
         adminMode,
         setAdminMode,
@@ -40,7 +43,10 @@ const ContextLayout = ({children} : Props) => {
         setQuantityProducts,
         totalPrice,
         setTotalPrice,
-        handleDeleteProductToCart
+        handleDeleteProductToCart,
+        products,
+        setProducts,
+        handleDeleteProduct
     }
 
 
