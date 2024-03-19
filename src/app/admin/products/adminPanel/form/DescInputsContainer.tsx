@@ -4,10 +4,11 @@ import TextareaFormProduct from '@/reusableComponents/formProduct/TextareaFormPr
 type Props = {
     title: string,
     desc: string,
-    detail : string
+    detail : string,
+    handleChange: () => void
 }
 
-const DescInputsContainer = ({title, desc, detail} : Props) => {
+const DescInputsContainer = ({title, desc, detail, handleChange} : Props) => {
     return (
         <div className='formMain_inputsContainer'>
             <p className='titleForm'>Description</p>
