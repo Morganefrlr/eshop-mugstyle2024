@@ -2,10 +2,10 @@ import InputFormProduct from '@/reusableComponents/formProduct/InputFormProduct'
 import TextareaFormProduct from '@/reusableComponents/formProduct/TextareaFormProduct';
 
 type Props = {
-    title: string,
-    desc: string,
-    detail : string,
-    handleChange: () => void
+    title: string | any,
+    desc: string | any,
+    detail : string | any,
+    handleChange: (e:any) => void
 }
 
 const DescInputsContainer = ({title, desc, detail, handleChange} : Props) => {
@@ -13,9 +13,9 @@ const DescInputsContainer = ({title, desc, detail, handleChange} : Props) => {
         <div className='formMain_inputsContainer'>
             <p className='titleForm'>Description</p>
             <div>
-                <InputFormProduct label={"Product Name"} type={"text"} value={title} />
-                <TextareaFormProduct label={'Description'} value={desc}/>
-                <TextareaFormProduct label={'Details'} value={detail}/>
+                <InputFormProduct label={"Product Name"} type={"text"} name='title' value={title} handleChange={handleChange} />
+                <TextareaFormProduct label={'Description'} name='desc' value={desc} handleChange={handleChange}/>
+                <TextareaFormProduct label={'Details'} name='detail' value={detail} handleChange={handleChange}/>
             </div>
         </div>
     );

@@ -1,7 +1,6 @@
-import { singleProduct } from '@/fakeData/fakeData';
+
 import Image from 'next/image';
-import { it } from 'node:test';
-import React from 'react';
+
 
 
 

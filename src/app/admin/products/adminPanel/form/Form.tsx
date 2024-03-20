@@ -9,7 +9,7 @@ import { ProductType } from '@/fakeData/typeData';
 type Props = {
     submit: string,
     product: ProductType,
-    handleChange: () => void,
+    handleChange: (e:any) => void,
 }
 const Form = ({submit, product, handleChange }: Props) => {
 
@@ -21,8 +21,8 @@ const Form = ({submit, product, handleChange }: Props) => {
                     <div className='formMain_imageContainer'>
                        {product.cover ? (<Image src={product.cover} alt='' width={200} height={200} />) : (<p>+</p>)}
                     </div>
-                    <DescInputsContainer title={product.title} desc={product.desc} detail={product.detail} handleChange={handleChangeInputs}/>
-                    <DetailsInputsContainer capacity={product.capacity} width={product.width} height={product.height} material={product.material} color={product.color} mugType={product.mugType}/>
+                    <DescInputsContainer title={product.title} desc={product.desc} detail={product.detail} handleChange={handleChange}/>
+                    <DetailsInputsContainer capacity={product.capacity} width={product.width} height={product.height} material={product.material} color={product.color} mugType={product.mugType} handleChange={handleChange}/>
                     <PicturesFormContainer pictures={product.pictures}/>
                     <button>{submit}</button>
                 </form>
