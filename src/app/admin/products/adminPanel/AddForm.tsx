@@ -5,7 +5,7 @@ import { useGlobalAdminContext } from '@/context/AdminContext';
 
 const AddForm = () => {
 
-    const {productToEdit, setProductToEdit} = useGlobalAdminContext()
+    const {productToEdit, setProductToEdit, handleAddProduct} = useGlobalAdminContext()
 
 
     const handleChangeInputs = (e : any) => {
@@ -16,9 +16,12 @@ const AddForm = () => {
        })
       };
 
-    
+      const handleAddNewProduct = (e : any) => {
+        e.preventDefault()
+        handleAddProduct(productToEdit)
+    }
     return (
-        <Form submit={'Add New Product'} product={productToEdit} handleChange={handleChangeInputs}/>
+        <Form submit={'Add New Product'} product={productToEdit} handleChange={handleChangeInputs} handleSubmit={handleAddNewProduct}/>
     );
 };
 

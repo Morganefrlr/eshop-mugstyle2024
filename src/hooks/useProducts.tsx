@@ -1,12 +1,24 @@
 import { allProducts } from "@/fakeData/fakeData"
 import { ProductType } from "@/fakeData/typeData"
-import { deepCloneArray } from "@/utils/array"
+import { deepCloneArray, findIndexInArray } from "@/utils/array"
 import { useState } from "react"
 
 
 
 export const useProducts = () => {
     const [products, setProducts] = useState(allProducts)
+
+    const handleAddProduct = (productToAdd : ProductType) =>{
+
+        const productsClone = deepCloneArray(products)
+        const productsUpadted = [productToAdd, ...productsClone]
+        setProducts(productsUpadted)
+
+    }
+
+    const handleEditProduct = () =>{
+
+    }
 
 
     const handleDeleteProduct = (slug : string) => {
@@ -17,6 +29,6 @@ export const useProducts = () => {
     }
 
 
-    return{products, setProducts, handleDeleteProduct}
+    return{products, setProducts, handleDeleteProduct, handleAddProduct}
 
 }

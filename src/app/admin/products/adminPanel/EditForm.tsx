@@ -14,9 +14,16 @@ const EditForm = () => {
         }
 
         setProductToEdit(testToEdit)
-       };
+    };
+
+    const handleEditProduct = (e : any) => {
+        e.preventDefault()
+        console.log('ok')
+    }
+ 
+
     return (
-            <Form submit={'Edit Product'} product={productToEdit} handleChange={handleChangeInputs}/>
+            <Form submit={'Edit Product'} product={productToEdit} handleChange={handleChangeInputs} handleSubmit={handleEditProduct}/>
     );
 };
 

@@ -1,7 +1,7 @@
 export type ProductType = {
     id: number,
     title:string,
-    cover: string,
+    cover?: string,
     price: number,
     pictures?: string[],
     slug: string,

@@ -10,14 +10,15 @@ type Props = {
     submit: string,
     product: ProductType,
     handleChange: (e:any) => void,
+    handleSubmit: (e:any) => void,
 }
-const Form = ({submit, product, handleChange }: Props) => {
+const Form = ({submit, product, handleChange, handleSubmit }: Props) => {
 
     
 
 
     return (
-                <form className='formMain' typeof='submit'>
+                <form className='formMain' typeof='submit' onSubmit={handleSubmit}>
                     <div className='formMain_imageContainer'>
                        {product.cover ? (<Image src={product.cover} alt='' width={200} height={200} />) : (<p>+</p>)}
                     </div>

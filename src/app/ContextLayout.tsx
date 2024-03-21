@@ -16,13 +16,13 @@ type Props ={
 
 const ContextLayout = ({children} : Props) => {
 
-    const [adminMode, setAdminMode] = useState<boolean>(false)
+    const [adminMode, setAdminMode] = useState<boolean>(true)
     const [adminPanel, setAdminPanel] = useState<boolean>(false)
     const [adminPanelSelected, setAdminPanelSelected] = useState<string>('edit')
     const [productToEdit,setProductToEdit] = useState<ProductType>(emptyProduct)
 
     const { cart, setCart, handleAddProductToCart,quantityProducts, setQuantityProducts,totalPrice, setTotalPrice,handleDeleteProductToCart } = useCart()
-    const {products, setProducts, handleDeleteProduct} = useProducts()
+    const {products, setProducts, handleDeleteProduct, handleAddProduct} = useProducts()
 
 
     const adminProviderValue ={
@@ -44,7 +44,8 @@ const ContextLayout = ({children} : Props) => {
         handleDeleteProductToCart,
         products,
         setProducts,
-        handleDeleteProduct
+        handleDeleteProduct,
+        handleAddProduct
     }
 
 
