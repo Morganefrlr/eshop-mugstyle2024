@@ -4,6 +4,7 @@ import { useGlobalAdminContext } from '@/context/AdminContext';
 import { findInArray } from '@/utils/array';
 import { formatPrice } from '@/utils/math';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 
 const Price = ({price, slug} : {price :number, slug: string}) => {
@@ -24,6 +25,8 @@ const Price = ({price, slug} : {price :number, slug: string}) => {
         if(productToCart){
             handleAddProductToCart(productToCart, quantity)
         }
+    
+        toast.info('Product added to the cart!')
      }
 
     

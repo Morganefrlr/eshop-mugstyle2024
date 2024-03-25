@@ -5,9 +5,9 @@ import { OrderType, ProductType} from "./typeData";
 export const emptyProduct = {
     id: 0,
     title:"",
-    cover: "",
+    cover: "/new.png",
     price: 0,
-    pictures: [],
+    pictures: ["/new.png"],
     slug: "",
     capacity: 0,
     width: 0,

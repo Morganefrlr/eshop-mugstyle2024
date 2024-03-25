@@ -2,15 +2,13 @@
 import Footer from '@/components/footer/Footer';
 import Navbar from '@/components/navbar/Navbar';
 import { ReactNode, useState } from 'react';
-import { Rubik } from "next/font/google";
 import {AdminContext} from '@/context/AdminContext';
 import { emptyProduct } from '@/fakeData/fakeData';
 import { ProductType } from '@/fakeData/typeData';
 import { useCart } from '@/hooks/useCart';
 import { useProducts } from '@/hooks/useProducts';
-
-
-const rubik = Rubik({ subsets: ["latin"] });
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 type Props ={
     children: ReactNode
@@ -18,13 +16,13 @@ type Props ={
 
 const ContextLayout = ({children} : Props) => {
 
-    const [adminMode, setAdminMode] = useState<boolean>(false)
+    const [adminMode, setAdminMode] = useState<boolean>(true)
     const [adminPanel, setAdminPanel] = useState<boolean>(false)
     const [adminPanelSelected, setAdminPanelSelected] = useState<string>('edit')
     const [productToEdit,setProductToEdit] = useState<ProductType>(emptyProduct)
 
     const { cart, setCart, handleAddProductToCart,quantityProducts, setQuantityProducts,totalPrice, setTotalPrice,handleDeleteProductToCart } = useCart()
-    const {products, setProducts, handleDeleteProduct} = useProducts()
+    const {products, setProducts, handleDeleteProduct, handleAddProduct, handleEditProduct} = useProducts()
 
 
     const adminProviderValue ={
@@ -46,18 +44,19 @@ const ContextLayout = ({children} : Props) => {
         handleDeleteProductToCart,
         products,
         setProducts,
-        handleDeleteProduct
+        handleDeleteProduct,
+        handleAddProduct,
+        handleEditProduct
     }
 
 
     
     return (
         <AdminContext.Provider value={adminProviderValue}>
-            <body className={rubik.className}>
-                <Navbar/>
-                {children}
-                <Footer />
-            </body>
+            <Navbar/>
+            {children}
+            <Footer />
+            <ToastContainer position="bottom-right" theme="dark" autoClose={1500} />
         </AdminContext.Provider>
     );
 };

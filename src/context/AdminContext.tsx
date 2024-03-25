@@ -36,6 +36,8 @@ export type GlobalAdminContext = {
     products:ProductType[],
     setProducts:(a:ProductType[]) => void,
     handleDeleteProduct:(a:string) => void
+    handleAddProduct:(a:ProductType) => void
+    handleEditProduct:(a:ProductType) => void
 
 }
 
@@ -45,7 +47,7 @@ export type GlobalAdminContext = {
 
 
 export const AdminContext = createContext<GlobalAdminContext>({
-    adminMode : false,
+    adminMode : true,
     setAdminMode: () => {},
 
     adminPanel : false,
@@ -74,6 +76,8 @@ export const AdminContext = createContext<GlobalAdminContext>({
     products:[],
     setProducts: () => {},
     handleDeleteProduct: () => {},
+    handleAddProduct: () => {},
+    handleEditProduct: () => {},
 })
 
 

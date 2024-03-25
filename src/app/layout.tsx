@@ -2,7 +2,9 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 import ContextLayout from "./ContextLayout";
+import { Rubik } from "next/font/google";
 
+const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "MugStyle e-shop",
@@ -19,9 +21,11 @@ export default function RootLayout({
 
   return (
     <html lang="fr">
-      <ContextLayout>
-        {children}
-      </ContextLayout>
+      <body className={rubik.className}>
+        <ContextLayout>
+            {children}
+        </ContextLayout>
+      </body>
     </html>
   );
 }
