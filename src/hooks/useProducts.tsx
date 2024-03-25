@@ -2,18 +2,23 @@ import { allProducts } from "@/fakeData/fakeData"
 import { ProductType } from "@/fakeData/typeData"
 import { deepCloneArray, findIndexInArray } from "@/utils/array"
 import { slugify } from "@/utils/slugify"
+import { useRouter } from 'next/navigation'
 import { useState } from "react"
+import { toast } from "react-toastify"
 
 
 
 export const useProducts = () => {
     const [products, setProducts] = useState(allProducts)
+    const router = useRouter()
 
     const handleAddProduct = (productToAdd : ProductType) =>{
 
         const productsClone = deepCloneArray(products)
         const productsUpadted = [productToAdd, ...productsClone]
         setProducts(productsUpadted)
+        toast.info('New Product created!')
+        router.push(`/our-products/${productToAdd.slug}`)
 
     }
 
@@ -24,6 +29,8 @@ export const useProducts = () => {
         productsClone[productToEditIndex] = productToEdit
         productsClone[productToEditIndex].slug = slugify(productToEdit.title)
         setProducts(productsClone)
+        toast.info('Product edited!')
+        router.push(`/our-products/${productsClone[productToEditIndex].slug}`)
 
     }
 
