@@ -23,7 +23,7 @@ const Form = ({submit, product, handleChange, handleSubmit }: Props) => {
                        {product.cover ? (<Image src={product.cover} alt='' width={200} height={200} />) : (<p>+</p>)}
                     </div>
                     <DescInputsContainer title={product.title} desc={product.desc} detail={product.detail} handleChange={handleChange}/>
-                    <DetailsInputsContainer capacity={product.capacity} width={product.width} height={product.height} material={product.material} color={product.color} mugType={product.mugType} handleChange={handleChange}/>
+                    <DetailsInputsContainer price={product.price} capacity={product.capacity} width={product.width} height={product.height} material={product.material} color={product.color} mugType={product.mugType} handleChange={handleChange}/>
                     <PicturesFormContainer pictures={product.pictures}/>
                     <button>{submit}</button>
                 </form>

@@ -4,7 +4,7 @@ import Form from './form/Form';
 
 const EditForm = () => {
 
-    const {productToEdit, setProductToEdit} = useGlobalAdminContext()
+    const {productToEdit, setProductToEdit, handleEditProduct} = useGlobalAdminContext()
 
     const handleChangeInputs = (e : any) => {
         const {name , value }= e.target
@@ -16,14 +16,14 @@ const EditForm = () => {
         setProductToEdit(testToEdit)
     };
 
-    const handleEditProduct = (e : any) => {
+    const handleEdit = (e : any) => {
         e.preventDefault()
-        console.log('ok')
+        handleEditProduct(productToEdit)
     }
  
 
     return (
-            <Form submit={'Edit Product'} product={productToEdit} handleChange={handleChangeInputs} handleSubmit={handleEditProduct}/>
+            <Form submit={'Edit Product'} product={productToEdit} handleChange={handleChangeInputs} handleSubmit={handleEdit}/>
     );
 };
 

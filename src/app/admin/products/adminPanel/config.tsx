@@ -24,9 +24,10 @@ type Props = {
     material: string,
     color: string,
     mugType: string, 
+    price: number, 
 }
 
-export const formCatConfig = ({capacity, width, height, material, color, mugType} : Props) => [
+export const formCatConfig = ({capacity, width, height, material, color, mugType, price} : Props) => [
     {
         label:"Mug Type",
         type:"text",
@@ -62,5 +63,11 @@ export const formCatConfig = ({capacity, width, height, material, color, mugType
         type:"number",
         value:width,
         name:"width",
+    },
+    {
+        label:"Price",
+        type:"number",
+        value:price,
+        name:"price",
     },
 ]

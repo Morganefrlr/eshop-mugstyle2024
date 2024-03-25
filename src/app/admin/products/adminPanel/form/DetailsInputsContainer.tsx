@@ -9,10 +9,11 @@ type Props = {
     material: string | any,
     color: string | any,
     mugType: string | any, 
+    price: number | any, 
     handleChange: (e:any) => void
 }
-const DetailsInputsContainer = ({capacity, width, height, material, color, mugType, handleChange} : Props) => {
-   const config = formCatConfig({capacity, width, height, material, color, mugType})
+const DetailsInputsContainer = ({capacity, width, height, material, color, mugType, price, handleChange } : Props) => {
+   const config = formCatConfig({capacity, width, height, material, color, mugType, price})
     return (
         <div className='formMain_inputsContainer'>
             <p className='titleForm'>Category</p>
