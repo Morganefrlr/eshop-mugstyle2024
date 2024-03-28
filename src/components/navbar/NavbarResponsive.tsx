@@ -1,17 +1,18 @@
 import {VscMenu, VscChromeClose} from 'react-icons/vsc'
-import NavbarLinks from './NavbarLinksMenu';
+import NavbarLinksMenu from './NavbarLinksMenu';
 
 type Props ={
     onClick : ()=>void,
-    open: boolean
+    openMenuResponsive: boolean,
+    adminMode: boolean,
 }
 
-const NavbarResponsive = ({onClick, open} : Props) => {
+const NavbarResponsive = ({onClick, openMenuResponsive, adminMode} : Props) => {
     return (
         <div className="containerNavbarResponsive">
-                {!open ? ( <VscMenu className="icon" onClick={onClick}/>):( <VscChromeClose className='icon active'  onClick={onClick}/>)}
-                {open && 
-                    <NavbarLinks className={'containerNavbarResponsive_links'}/>
+                {!openMenuResponsive ? ( <VscMenu className="icon" onClick={onClick}/>):( <VscChromeClose className='icon active'  onClick={onClick}/>)}
+                {openMenuResponsive && 
+                    <NavbarLinksMenu className={'containerNavbarResponsive_links'} adminMode={adminMode}/>
                 }
                     
                 
