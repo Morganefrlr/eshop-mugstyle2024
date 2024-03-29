@@ -15,12 +15,12 @@ import { toast } from "react-toastify";
 const Navbar = () => {
 
     const {adminMode, quantityProducts, setAdminMode} = useGlobalAdminContext()
-    const [open, setOpen] = useState(false)
+    const [openMenuResponsive, setOpenMenuResponsive] = useState(false)
     const router = useRouter()
 
 
     const handleMenuResponsive = () =>{
-        setOpen(!open)
+        setOpenMenuResponsive(!openMenuResponsive)
     }
 
     const handleAdminMode = () => {
@@ -42,6 +42,7 @@ const Navbar = () => {
     return (
         <div className="mainNavbar">
             <Logo/>
+
             <NavbarLinksMenu className={'middleContainerNavbar'} adminMode={adminMode}/>
             
             <div className="rightContainerNavbar">
@@ -55,10 +56,10 @@ const Navbar = () => {
                 </>}
                     
                 </div>
-                <button className={adminMode ? 'adminMode actif' : 'adminMode '} onClick={handleAdminMode}><IoMdSettings className="icon"/></button>
+                <button className={adminMode ? 'adminMode actif' : 'adminMode '} onClick={handleAdminMode}><IoMdSettings className="iconSettings"/></button>
             </div>
            
-            <NavbarResponsive onClick={handleMenuResponsive} open={open}/>
+            <NavbarResponsive onClick={handleMenuResponsive} openMenuResponsive={openMenuResponsive} adminMode={adminMode}/>
 
         </div>
     );

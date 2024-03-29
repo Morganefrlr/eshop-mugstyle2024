@@ -1,8 +1,8 @@
-
 import type { Metadata } from "next";
 import "./globals.scss";
-import ContextLayout from "./ContextLayout";
+
 import { Rubik } from "next/font/google";
+import ContextLayout from "@/context/ContextLayout";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
