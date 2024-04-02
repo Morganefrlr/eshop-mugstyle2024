@@ -6,7 +6,7 @@ import { IoCloseCircleSharp } from "react-icons/io5";
 
 type Props = {
     title : string,
-    cover : string,
+    cover : string | any,
     price: number,
     slug:string,
     adminMode: boolean,

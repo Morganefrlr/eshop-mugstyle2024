@@ -31,7 +31,7 @@ const page = () => {
                     <Title label={'Products'} titlePage={true}/>
                     <button onClick={handleAddPanel}>Add New Product +</button>
                 </div>
-                <DisplayProductsList products={products}/>
+                <DisplayProductsList products={products} classCard={'singleCard'} classBox={'boxSingleCard'}/>
             </div>
             {adminPanel && <AdminPanel handleEditMode={handleEditMode}/>}
             

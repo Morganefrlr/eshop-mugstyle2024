@@ -7,7 +7,7 @@ const page = () => {
     const {products} = useGlobalAdminContext()
     return (
         <div>
-            <ProductsList label={'Our Products'} titlePage={true}  products={products}/>
+            <ProductsList label={'Our Products'} titlePage={true}  products={products} classCard={'singleCard'} classBox={'boxSingleCard'}/>
         </div>
     );
 };

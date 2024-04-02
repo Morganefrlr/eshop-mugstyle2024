@@ -4,18 +4,24 @@ import { ProductType } from '@/fakeData/typeData';
 import Card from '../card/Card';
 import { useGlobalAdminContext } from '@/context/AdminContext';
 import { toast } from 'react-toastify';
+import { useEffect, useState } from 'react';
 
 
 
 
 type Props = {
-    products: ProductType[]
+    products: ProductType[],
+    classCard: string,
+    classBox: string,
+   
 }
 
-const DisplayProductsList = ({products} : Props) => {
+const DisplayProductsList = ({ products, classBox, classCard} : Props) => {
     
     const {adminMode, setAdminPanelSelected, setAdminPanel, setProductToEdit, handleDeleteProduct} = useGlobalAdminContext()
+        
     
+        
     const handleAdminModeBtn = async (item: ProductType) => {
         
         await setProductToEdit(item)
@@ -29,10 +35,12 @@ const DisplayProductsList = ({products} : Props) => {
     }
 
 
+
+
     return (
-        <div className='containerProducts'>
+        <div className={classBox}>
                 {products.map(item =>
-                    <div key={item.title} className='containerProducts_singleCard'>
+                    <div key={item.title} className={classCard}>
                         <Card  
                             title={item.title} 
                             adminMode={adminMode} 

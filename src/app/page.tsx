@@ -17,8 +17,8 @@ export default function Home() {
     <div className="homeMain">
       <Banner />
       <About />
-      <Featured products={featuredProducts}/>
-      <ProductsList label={'More Products'} titlePage={false} products={products.slice(0,9)}/>
+      <Featured products={products.slice(0,2)}/>
+      <ProductsList label={'More Products'} titlePage={false} products={products.slice(0,9)} classCard={'singleCard'} classBox={'boxSingleCard'}/>
       <Newsletter />
     </div>
   );
