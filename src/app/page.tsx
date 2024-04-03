@@ -3,7 +3,6 @@ import Featured from "@/components/featured/Featured";
 import About from "../components/about/About";
 import Banner from "../components/banner/Banner";
 import ProductsList from "@/reusableComponents/productsList/ProductsList";
-import {featuredProducts } from "@/fakeData/fakeData";
 import Newsletter from "@/components/newsletter/Newsletter";
 import { useGlobalAdminContext } from "@/context/AdminContext";
 
