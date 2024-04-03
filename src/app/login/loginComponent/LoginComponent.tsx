@@ -1,4 +1,4 @@
-import { loginButtonConfig } from '@/app/login/helper/loginConfig';
+import { loginButtonConfig } from '@/app/login/loginComponent/loginConfig';
 import LoginButton from './LoginButton';
 
 const LoginComponent = () => {

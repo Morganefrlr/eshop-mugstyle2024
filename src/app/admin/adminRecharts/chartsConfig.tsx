@@ -15,7 +15,7 @@ export const pieData = [
       className: 'green',
     
     },
-    { label: 'Google', 
+    { label: 'GoogleSearch', 
       value: 43, 
       color: '#854D0E', 
       dif: 15.20,
