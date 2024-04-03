@@ -1,5 +1,6 @@
 
-import Price from "./Price";
+import BoxPriceQuantity from "./BoxPriceQuantity";
+
 
 type Props={
     desc:string,
@@ -16,7 +17,7 @@ const TopSideRight = ({ desc, title, price, slug} : Props) => {
             <h1>{title}</h1>
             <p>by: MugStyle</p>
             <span>{desc}</span>
-            <Price price={price} slug={slug}/>
+            <BoxPriceQuantity price={price} slug={slug}/>
         </div>
     );
 };

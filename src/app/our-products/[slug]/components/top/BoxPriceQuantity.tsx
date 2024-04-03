@@ -7,12 +7,14 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 
 
-const Price = ({price, slug} : {price :number, slug: string}) => {
+const BoxPriceQuantity = ({price, slug} : {price :number, slug: string}) => {
 
     const{handleAddProductToCart , products} = useGlobalAdminContext()
 
     const [quantity, setQuantity] = useState(1)
 
+
+    
     const handleQuantity = (operation : string) => {
      
         if(operation === 'minus') return setQuantity(prev =>(prev>1 ? prev-1 : 1))
@@ -38,4 +40,4 @@ const Price = ({price, slug} : {price :number, slug: string}) => {
     );
 };
 
-export default Price;
+export default BoxPriceQuantity;
