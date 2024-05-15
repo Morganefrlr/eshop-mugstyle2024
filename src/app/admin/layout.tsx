@@ -1,5 +1,5 @@
 'use client'
-import { useGlobalAdminContext } from "@/context/AdminContext";
+import { globalAdminContext } from "@/context/AdminContext";
 
 
 
@@ -9,7 +9,7 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
 
-  const {adminMode} = useGlobalAdminContext()
+  const {adminMode} = globalAdminContext()
 
 
   if(adminMode !== true) return <div className="adminMessage">You are not allowed!!!</div>

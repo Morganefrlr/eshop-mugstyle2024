@@ -3,11 +3,11 @@
 
 import { slugify } from '@/utils/slugify';
 import Form from './form/Form';
-import { useGlobalAdminContext } from '@/context/AdminContext';
+import { globalAdminContext } from '@/context/AdminContext';
 
 const AddForm = () => {
 
-    const {productToEdit, setProductToEdit, handleAddProduct} = useGlobalAdminContext()
+    const {productToEdit, setProductToEdit, handleAddProduct} = globalAdminContext()
    
     const handleChangeInputs = (e : any) => {
        const value = e.target.value

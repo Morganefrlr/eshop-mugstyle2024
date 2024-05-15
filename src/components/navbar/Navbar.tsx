@@ -5,7 +5,7 @@ import {GiShoppingBag} from 'react-icons/gi'
 import NavbarLinksMenu from "./NavbarLinksMenu";
 import NavbarResponsive from "./NavbarResponsive";
 import Logo from "../../reusableComponents/LogoMugStyle";
-import  { useGlobalAdminContext } from "@/context/AdminContext";
+import  { globalAdminContext } from "@/context/AdminContext";
 import { IoMdSettings } from "react-icons/io";
 import { useRouter } from 'next/navigation'
 import { toast } from "react-toastify";
@@ -14,7 +14,7 @@ import { toast } from "react-toastify";
 
 const Navbar = () => {
 
-    const {adminMode, quantityProducts, setAdminMode} = useGlobalAdminContext()
+    const {adminMode, quantityProducts, setAdminMode} = globalAdminContext()
     const [openMenuResponsive, setOpenMenuResponsive] = useState(false)
     const router = useRouter()
 

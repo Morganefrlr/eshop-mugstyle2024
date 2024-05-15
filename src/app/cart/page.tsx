@@ -1,12 +1,12 @@
 'use client'
 import Title from '@/reusableComponents/title/Title';
 import CartContainer from './cartContainer/CartContainer';
-import { useGlobalAdminContext } from '@/context/AdminContext';
+import { globalAdminContext } from '@/context/AdminContext';
 
 
 
 const page = () => {
-    const { cart, quantityProducts, totalPrice, handleDeleteProductToCart } = useGlobalAdminContext()
+    const { cart, quantityProducts, totalPrice, handleDeleteProductToCart } = globalAdminContext()
 
     const handleRemoveProductCart = (slug : string) => {
         handleDeleteProductToCart(slug)
