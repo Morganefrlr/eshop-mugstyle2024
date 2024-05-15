@@ -7,7 +7,7 @@ export const emptyProduct = {
     title:"",
     cover: "/new.png",
     price: 0,
-    pictures: ["/new.png"],
+    pictures: ["/new.png","/new.png"],
     slug: "",
     capacity: 0,
     width: 0,

@@ -9,13 +9,13 @@ import Logo from "../../reusableComponents/LogoMugStyle";
 import { IoMdSettings } from "react-icons/io";
 import { useRouter } from 'next/navigation'
 import { toast } from "react-toastify";
-import { useGlobalContext } from "@/hooks/useGlobalContext";
+import { GlobalAdminContext } from "@/context/AdminContext";
 
 
 
 const Navbar = () => {
 
-    const {adminMode, quantityProducts, setAdminMode} = useGlobalContext()
+    const {adminMode, quantityProducts, setAdminMode} = GlobalAdminContext()
     const [openMenuResponsive, setOpenMenuResponsive] = useState(false)
     const router = useRouter()
 

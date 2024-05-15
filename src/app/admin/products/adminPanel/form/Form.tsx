@@ -8,13 +8,11 @@ import { ProductType } from '@/fakeData/typeData';
 
 type Props = {
     submit: string,
-    product: ProductType,
+    product: ProductType ,
     handleChange: (e:any) => void,
     handleSubmit: (e:any) => void,
 }
 const Form = ({submit, product, handleChange, handleSubmit }: Props) => {
-
-    
 
 
     return (

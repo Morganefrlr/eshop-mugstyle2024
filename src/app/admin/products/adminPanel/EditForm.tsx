@@ -1,11 +1,11 @@
 
 
+import { GlobalAdminContext } from '@/context/AdminContext';
 import Form from './form/Form';
-import { useGlobalContext } from '@/hooks/useGlobalContext';
 
 const EditForm = () => {
 
-    const {productToEdit, setProductToEdit, handleEditProduct} = useGlobalContext()
+    const {productToEdit, setProductToEdit, handleEditProduct} = GlobalAdminContext()
 
     const handleChangeInputs = (e : any) => {
         const {name , value }= e.target
