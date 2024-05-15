@@ -5,7 +5,7 @@ import { createContext, useContext } from "react";
 
 
 
-export type GlobalAdminContext = {
+export type GlobalAdminContextType = {
     adminMode :boolean,
     setAdminMode:(a:boolean) => void,
 
@@ -46,7 +46,7 @@ export type GlobalAdminContext = {
 
 
 
-export const AdminContext = createContext<GlobalAdminContext>({
+export const AdminContext = createContext<GlobalAdminContextType>({
     adminMode : true,
     setAdminMode: () => {},
 
@@ -82,4 +82,4 @@ export const AdminContext = createContext<GlobalAdminContext>({
 
 
 
-export const globalAdminContext = () => useContext(AdminContext)
+// export const globalAdminContext = () => useContext(AdminContext)

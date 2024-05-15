@@ -1,6 +1,7 @@
 'use client'
 import Quantity from '@/components/quantity/Quantity';
-import { globalAdminContext } from '@/context/AdminContext';
+
+import { useGlobalContext } from '@/hooks/useGlobalContext';
 import { findInArray } from '@/utils/array';
 import { formatPrice } from '@/utils/math';
 import { useState } from 'react';
@@ -9,7 +10,7 @@ import { toast } from 'react-toastify';
 
 const BoxPriceQuantity = ({price, slug} : {price :number, slug: string}) => {
 
-    const{handleAddProductToCart , products} = globalAdminContext()
+    const{handleAddProductToCart , products} = useGlobalContext()
 
     const [quantity, setQuantity] = useState(1)
 

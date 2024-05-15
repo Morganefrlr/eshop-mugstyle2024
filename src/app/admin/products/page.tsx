@@ -1,17 +1,17 @@
 'use client'
 
-import { globalAdminContext } from '@/context/AdminContext';
 import { emptyProduct } from '@/fakeData/fakeData';
 import DisplayProductsList from '@/reusableComponents/productsList/DisplayProductsList';
 import Title from '@/reusableComponents/title/Title';
 import AdminPanel from './adminPanel/AdminPanel';
+import { useGlobalContext } from '@/hooks/useGlobalContext';
 
 
 
 
 const page = () => {
 
-    const {adminPanel ,setAdminPanel, setAdminPanelSelected, adminPanelSelected, setProductToEdit, products} = globalAdminContext()
+    const {adminPanel ,setAdminPanel, setAdminPanelSelected, adminPanelSelected, setProductToEdit, products} = useGlobalContext()
 
     const handleEditMode = () =>{
         setAdminPanel(false)
