@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 
 const PicturesFormContainer = ({pictures} : {pictures:string[]}) => {
-     
+ 
     return (
         <div className='formMain_picturesContainer'>
             {pictures.map(item =>
