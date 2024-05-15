@@ -1,10 +1,11 @@
 'use client'
-import { globalAdminContext } from '@/context/AdminContext';
+
+import { useGlobalContext } from '@/hooks/useGlobalContext';
 import ProductsList from '@/reusableComponents/productsList/ProductsList';
 import React from 'react';
 
 const page = () => {
-    const {products} = globalAdminContext()
+    const {products} = useGlobalContext()
     return (
         <div>
             <ProductsList label={'Our Products'} titlePage={true}  products={products} classCard={'singleCard'} classBox={'boxSingleCard'}/>

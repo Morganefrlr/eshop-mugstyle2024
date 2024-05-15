@@ -4,13 +4,14 @@ import About from "../components/about/About";
 import Banner from "../components/banner/Banner";
 import ProductsList from "@/reusableComponents/productsList/ProductsList";
 import Newsletter from "@/components/newsletter/Newsletter";
-import { globalAdminContext } from "@/context/AdminContext";
+
+import { useGlobalContext } from "@/hooks/useGlobalContext";
 
 
 
 export default function Home() {
 
-  const {products} = globalAdminContext()
+  const {products} = useGlobalContext()
 
   return (
     <div className="homeMain">
