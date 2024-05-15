@@ -1,7 +1,6 @@
 
-import Title from '@/reusableComponents/title/Title';
-import FeaturedCardContainer from './FeaturedCardContainer';
 import { ProductType } from '@/fakeData/typeData';
+import ProductsList from '@/reusableComponents/productsList/ProductsList';
 
 type Props ={
     products : ProductType[]
@@ -9,8 +8,7 @@ type Props ={
 const Featured = ({products} :Props ) => {
     return (
         <div className='featuredMain'>
-            <Title label={'Featured Mugs'} titlePage={false} />
-            <FeaturedCardContainer products={products} />
+            <ProductsList label={'Featured Products'} titlePage={false} products={products} classCard={'featuredCard'} classBox={'boxFeaturedCard'}/>
         </div>
     );
 };

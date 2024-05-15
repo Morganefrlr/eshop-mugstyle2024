@@ -82,4 +82,4 @@ export const AdminContext = createContext<GlobalAdminContext>({
 
 
 
-export const useGlobalAdminContext = () => useContext(AdminContext)
+export const globalAdminContext = () => useContext(AdminContext)

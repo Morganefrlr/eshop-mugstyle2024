@@ -4,17 +4,27 @@
 
 }
 
-.containerProducts{
+.boxSingleCard{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 55vw;
     gap: 15px;
     margin: 0 auto;
 
-    &_singleCard{
+    .singleCard{
         height: 350px;
     }
 
+}
+
+.boxFeaturedCard{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    height: 550px;   
+    .featuredCard{
+        flex: 1;
+    }
 }
 
 
@@ -22,14 +32,14 @@
 
 
 @media (max-width: 1024px){
-    .containerProducts{
+    .boxSingleCard{
         width: 75vw;
     }
 }
 
 
 @media (max-width: 768px){
-    .containerProducts{
+    .boxSingleCard{
         grid-template-columns: repeat(2, 1fr);
         width: 85vw;
     }
@@ -38,13 +48,21 @@
 
 
 @media (max-width: 640px){
-    .containerProducts{
+    .boxSingleCard{
         display: flex;
         flex-direction: column;
         width: 85vw;
 
-        &_singleCard{
+        .singleCard{
             height: 450px;
+        }
+    }
+
+
+    .boxFeaturedCard{
+        flex-direction: column;
+        .featuredCard{
+            height: 250px;
         }
     }
 }

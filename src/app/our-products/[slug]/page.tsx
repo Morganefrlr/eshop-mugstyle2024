@@ -5,7 +5,7 @@ import TopSide from "./components/top/TopSide";
 import BottomSide from "./components/bottom/BottomSide";
 import Newsletter from "@/components/newsletter/Newsletter";
 import { findInArray } from "@/utils/array";
-import { useGlobalAdminContext } from "@/context/AdminContext";
+import { globalAdminContext } from "@/context/AdminContext";
 
 
 
@@ -16,7 +16,7 @@ import { useGlobalAdminContext } from "@/context/AdminContext";
 const page = ({params} : {params : {slug : string}}) => {
 
     const {slug} = params
-    const {products} = useGlobalAdminContext()
+    const {products} = globalAdminContext()
     const productPage = findInArray(slug, products)
 
 

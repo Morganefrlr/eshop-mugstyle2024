@@ -2,7 +2,7 @@ import { formatPrice } from '@/utils/math';
 import Image from 'next/image';
 
 type Props ={
-    cover: string,
+    cover: string | any,
     title: string,
     price: number,
     quantity: number,

@@ -9,13 +9,13 @@ type Props = {
 }
 
 const Slider = ({images} : Props) => {
-    const [url, setUrl] = useState('')
+    const [urlImage, setUrlImage] = useState('')
     return (
         <div className="sliderMain">
-            <Image src={url ? (url) : (images[0])} width={200} height={200} alt='' className='sliderMain_cover'/>
+            <Image src={urlImage ? (urlImage) : (images[0])} width={200} height={200} alt='' className='sliderMain_cover'/>
             <div className='sliderMain_miniature'>
                 {images && images.map((img, index) => 
-                    <Image src={img} alt="" width={200} height={200} key={index} onClick={() => setUrl(img)}/>
+                    <Image src={img} alt="" width={200} height={200} key={index} onClick={() => setUrlImage(img)}/>
                 )}
             </div>
      </div>

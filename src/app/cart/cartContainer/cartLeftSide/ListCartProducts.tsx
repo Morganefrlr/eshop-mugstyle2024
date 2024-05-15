@@ -1,5 +1,5 @@
 import { ProductType } from '@/fakeData/typeData';
-import ProductCart from '../ProductCart';
+import ProductCart from './ProductCart';
 
 type Props = {
     cart : ProductType[],

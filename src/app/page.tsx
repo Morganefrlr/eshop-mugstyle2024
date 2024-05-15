@@ -3,22 +3,21 @@ import Featured from "@/components/featured/Featured";
 import About from "../components/about/About";
 import Banner from "../components/banner/Banner";
 import ProductsList from "@/reusableComponents/productsList/ProductsList";
-import {featuredProducts } from "@/fakeData/fakeData";
 import Newsletter from "@/components/newsletter/Newsletter";
-import { useGlobalAdminContext } from "@/context/AdminContext";
+import { globalAdminContext } from "@/context/AdminContext";
 
 
 
 export default function Home() {
 
-  const {products} = useGlobalAdminContext()
+  const {products} = globalAdminContext()
 
   return (
     <div className="homeMain">
       <Banner />
       <About />
-      <Featured products={featuredProducts}/>
-      <ProductsList label={'More Products'} titlePage={false} products={products.slice(0,9)}/>
+      <Featured products={products.slice(0,2)}/>
+      <ProductsList label={'More Products'} titlePage={false} products={products.slice(0,9)} classCard={'singleCard'} classBox={'boxSingleCard'}/>
       <Newsletter />
     </div>
   );

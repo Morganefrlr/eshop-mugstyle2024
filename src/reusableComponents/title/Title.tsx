@@ -8,7 +8,7 @@ type Props= {
 
 const Title = ({label, titlePage} : Props) => {
     return (
-        <p className={`${titlePage ? 'titleStyled page' :'titleStyled'}`}>{label}</p>
+        <p className={`${titlePage ? 'titleStyled mainTitle' :'titleStyled'}`}>{label}</p>
     );
 };
 
