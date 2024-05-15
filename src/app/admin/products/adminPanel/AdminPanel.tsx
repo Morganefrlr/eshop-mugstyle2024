@@ -1,7 +1,7 @@
 
 import Title from '@/reusableComponents/title/Title';
 import { adminPanelConfig } from './config';
-import { useGlobalContext } from '@/hooks/useGlobalContext';
+import { GlobalAdminContext } from '@/context/AdminContext';
 
 
 type Props ={
@@ -10,7 +10,7 @@ type Props ={
 
 const AdminPanel = ({ handleEditMode}:Props) => {
 
-    const {adminPanelSelected} = useGlobalContext()
+    const {adminPanelSelected} = GlobalAdminContext()
     const displayContent = adminPanelConfig.find((item) => item.index === adminPanelSelected)  
     
   

@@ -4,14 +4,15 @@ import { emptyProduct } from '@/fakeData/fakeData';
 import DisplayProductsList from '@/reusableComponents/productsList/DisplayProductsList';
 import Title from '@/reusableComponents/title/Title';
 import AdminPanel from './adminPanel/AdminPanel';
-import { useGlobalContext } from '@/hooks/useGlobalContext';
+
+import { GlobalAdminContext } from '@/context/AdminContext';
 
 
 
 
 const page = () => {
 
-    const {adminPanel ,setAdminPanel, setAdminPanelSelected, adminPanelSelected, setProductToEdit, products} = useGlobalContext()
+    const {adminPanel ,setAdminPanel, setAdminPanelSelected, adminPanelSelected, setProductToEdit, products} = GlobalAdminContext()
 
     const handleEditMode = () =>{
         setAdminPanel(false)

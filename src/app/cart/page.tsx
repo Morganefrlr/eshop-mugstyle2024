@@ -2,12 +2,12 @@
 import Title from '@/reusableComponents/title/Title';
 import CartContainer from './cartContainer/CartContainer';
 
-import { useGlobalContext } from '@/hooks/useGlobalContext';
+import { GlobalAdminContext } from '@/context/AdminContext';
 
 
 
 const page = () => {
-    const { cart, quantityProducts, totalPrice, handleDeleteProductToCart } = useGlobalContext()
+    const { cart, quantityProducts, totalPrice, handleDeleteProductToCart } = GlobalAdminContext()
 
     const handleRemoveProductCart = (slug : string) => {
         handleDeleteProductToCart(slug)

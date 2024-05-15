@@ -4,7 +4,7 @@ import { ProductType } from '@/fakeData/typeData';
 import Card from '../card/Card';
 
 import { toast } from 'react-toastify';
-import { useGlobalContext } from '@/hooks/useGlobalContext';
+import { GlobalAdminContext } from '@/context/AdminContext';
 
 
 
@@ -19,7 +19,7 @@ type Props = {
 
 const DisplayProductsList = ({ products, classBox, classCard} : Props) => {
     
-    const {adminMode, setAdminPanelSelected, setAdminPanel, setProductToEdit, handleDeleteProduct} = useGlobalContext()
+    const {adminMode, setAdminPanelSelected, setAdminPanel, setProductToEdit, handleDeleteProduct} = GlobalAdminContext()
         
     
         
