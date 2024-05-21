@@ -47,7 +47,7 @@ export type GlobalAdminContextType = {
 
 
 export const AdminContext = createContext<GlobalAdminContextType>({
-    adminMode : true,
+    adminMode : false,
     setAdminMode: () => {},
 
     adminPanel : false,
