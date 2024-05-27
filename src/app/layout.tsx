@@ -3,6 +3,7 @@ import "./globals.scss";
 
 import { Rubik } from "next/font/google";
 import ContextLayout from "@/context/ContextLayout";
+import AuthProvider from "./providers/AuthProvider";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -22,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={rubik.className}>
-        <ContextLayout>
-            {children}
-        </ContextLayout>
+        <AuthProvider>
+          <ContextLayout>
+              {children}
+          </ContextLayout>
+        </AuthProvider>
       </body>
     </html>
   );
