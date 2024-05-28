@@ -5,7 +5,7 @@ const LoginComponent = () => {
     return (
         <div className='loginComponent'>
         {loginButtonConfig.map(item =>
-            <LoginButton label={item.label} icon={item.icon} key={item.label}/>
+            <LoginButton label={item.label} icon={item.icon} key={item.label} onClick={item.onClick}/>
         )}
     </div>
     );

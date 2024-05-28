@@ -8,13 +8,16 @@ export const loginButtonConfig =[
     {
         label: "Apple",
         icon: <FaApple />,
+        onClick:''
     },
     {
         label: "Google",
         icon: <FcGoogle />,
+        onClick:'google'
     },
     {
         label: "Facebook",
         icon: <FaFacebook />,
+        onClick:''
     },
 ]
