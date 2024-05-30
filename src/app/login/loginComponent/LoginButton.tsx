@@ -1,5 +1,3 @@
-'use client'
-import { signIn } from "next-auth/react";
 
 type Props ={
     label: string,
@@ -8,8 +6,10 @@ type Props ={
 }
 
 const LoginButton = ({label, icon, onClick}: Props) => {
+
+    
     return (
-        <div className={`loginButton ${label}`} onClick={() => signIn(onClick)}>
+        <div className={`loginButton ${label}`} >
             {icon} 
             <p>Sign in with {label}</p>
         </div>
