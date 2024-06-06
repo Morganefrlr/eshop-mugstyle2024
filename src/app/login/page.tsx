@@ -1,15 +1,19 @@
+'use client'
 
-import RegisterForm from "./components/RegisterForm";
-import LogInForm from "./components/LogInForm";
+
+import { GlobalAdminContext } from "@/context/AdminContext";
+import { loginPageConfig } from "./config";
 
 
 const page = () => {
 
+    const {logPanelSelected} = GlobalAdminContext()
 
+    const displayContent = loginPageConfig.find((item) => item.index === logPanelSelected)  
 
     return (
         <div className="loginMain">
-            <LogInForm/>
+            {displayContent && displayContent.Content}
         </div>
     );
 };

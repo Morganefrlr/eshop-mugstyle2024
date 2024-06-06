@@ -39,6 +39,9 @@ export type GlobalAdminContextType = {
     handleAddProduct:(a:ProductType) => void
     handleEditProduct:(a:ProductType) => void
 
+
+    logPanelSelected: string,
+    setLogPanelSelected:(a:string) => void,
 }
 
 
@@ -78,6 +81,10 @@ export const AdminContext = createContext<GlobalAdminContextType>({
     handleDeleteProduct: () => {},
     handleAddProduct: () => {},
     handleEditProduct: () => {},
+
+
+    logPanelSelected: 'login',
+    setLogPanelSelected:() => {},
 })
 
 

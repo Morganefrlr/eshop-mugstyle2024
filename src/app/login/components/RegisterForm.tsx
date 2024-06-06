@@ -1,6 +1,10 @@
+import { GlobalAdminContext } from "@/context/AdminContext";
 
 
 const RegisterForm = () => {
+
+    const {setLogPanelSelected} = GlobalAdminContext()
+
     return (
         <div className="containerRegister">
                 <h1>Register</h1>
@@ -20,7 +24,7 @@ const RegisterForm = () => {
                 </div>
 
                 <button>Register</button>
-                <p>Have an account?</p>
+                <p onClick={() => setLogPanelSelected('login')}>Have an account?</p>
         </div>
     );
 };
