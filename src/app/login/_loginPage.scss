@@ -16,7 +16,7 @@
 }
 
 .containerRegister{
-    width: 20vw;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -77,75 +77,15 @@
 
 }
 
-.loginComponent{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    top: 25%;
-    left: 25%;
-    gap: 30px;
-    background-color: rgba(255,255,255, 0.24);
-    border: 1px solid rgb(255, 255, 255, 0.2);
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
-}
-
-
-.loginButton{
-    width: 80%;
-    display: flex;
-    height: 12%;
-    border-radius: 50px;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-weight: 300;
-
-    &:hover{
-        box-shadow: 4px 8px 10px lighten($main, 40);
-        font-weight: 400;
-    }
-
-}
-
-.Apple{
-    background-color: $main;
-    color: $light;
-}
-.Google{
-    border: 1px solid $main;
-}
-.Facebook{
-    background-color: rgb(37 99 235);
-    color: $light;
-}
-
 
 @media (max-width: 768px){
     .loginMain{
         width: 90vw;
     }
+    .containerRegister{
+        width: 70vw;
+    }
 }
 
 
-@media (max-width: 640px){
-    .loginMain{
-        height: 50vh;
-    }
-    .loginComponent{
-        height: 90%;
-        top: 5%;
-        p{
-            display: none;
-        }
-    }
-    .loginButton{
-        height: 20%;
-    }
-}
+
