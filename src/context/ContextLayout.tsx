@@ -20,6 +20,7 @@ const ContextLayout = ({children} : Props) => {
     const [adminPanel, setAdminPanel] = useState<boolean>(false)
     const [adminPanelSelected, setAdminPanelSelected] = useState<string>('edit')
     const [productToEdit,setProductToEdit] = useState<ProductType>(emptyProduct)
+    const [logPanelSelected, setLogPanelSelected] = useState<string>('login')
 
     const { cart, setCart, handleAddProductToCart,quantityProducts, setQuantityProducts,totalPrice, setTotalPrice,handleDeleteProductToCart } = useCart()
     const {products, setProducts, handleDeleteProduct, handleAddProduct, handleEditProduct} = useProducts()
@@ -46,7 +47,9 @@ const ContextLayout = ({children} : Props) => {
         setProducts,
         handleDeleteProduct,
         handleAddProduct,
-        handleEditProduct
+        handleEditProduct,
+        logPanelSelected,
+        setLogPanelSelected
     }
 
 

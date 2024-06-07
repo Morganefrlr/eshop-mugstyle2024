@@ -26,3 +26,15 @@ export type OrderType = {
     price: string,
     status: string
 }
+
+export type LogInPageContentType = {
+    index: string;
+    title: string;
+    inputs: {
+        label: string;
+        type: string;
+        name: string;
+    }[];
+    span: string;
+    onClick: string;
+}

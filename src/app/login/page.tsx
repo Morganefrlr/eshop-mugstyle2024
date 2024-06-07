@@ -1,14 +1,19 @@
+'use client'
 
-import Image from "next/image";
-import LoginComponent from "@/app/login/loginComponent/LoginComponent";
+
+import { GlobalAdminContext } from "@/context/AdminContext";
+import { loginPageConfig } from "./config";
+import FormLogPage from "./components/FormLogPage";
 
 
 const page = () => {
 
+    const {logPanelSelected} = GlobalAdminContext()
+    const displayContent = loginPageConfig.find((item) => item.index === logPanelSelected)  
+
     return (
         <div className="loginMain">
-            <Image alt="login" src='/m1-b.jpg' width={500} height={500} />
-            <LoginComponent />
+            <FormLogPage content={displayContent}/>
         </div>
     );
 };

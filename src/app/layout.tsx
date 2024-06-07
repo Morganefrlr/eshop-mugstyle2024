@@ -4,6 +4,7 @@ import "./globals.scss";
 import { Rubik } from "next/font/google";
 import ContextLayout from "@/context/ContextLayout";
 
+
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,9 +23,9 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={rubik.className}>
-        <ContextLayout>
-            {children}
-        </ContextLayout>
+          <ContextLayout>
+              {children}
+          </ContextLayout>
       </body>
     </html>
   );
