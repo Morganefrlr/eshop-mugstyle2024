@@ -2,15 +2,14 @@
 
 
 import { GlobalAdminContext } from "@/context/AdminContext";
-import { loginPageConfig, loginPageConfig2 } from "./config";
+import { loginPageConfig } from "./config";
 import FormLogPage from "./components/FormLogPage";
 
 
 const page = () => {
 
     const {logPanelSelected} = GlobalAdminContext()
-
-    const displayContent = loginPageConfig2.find((item) => item.index === logPanelSelected)  
+    const displayContent = loginPageConfig.find((item) => item.index === logPanelSelected)  
 
     return (
         <div className="loginMain">
